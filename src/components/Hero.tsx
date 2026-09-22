@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, ChevronRight, Sparkles } from 'lucide-react';
+import { MessageCircle, ChevronRight } from 'lucide-react';
 import { siteConfig } from '../config/site';
 import { StoneLogo } from './StoneLogo';
 
@@ -26,14 +26,6 @@ export const Hero: React.FC = () => {
       {/* Conteúdo Central Hero */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center text-center">
         
-        {/* Badge Discreta e Sofisticada */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-black/60 border border-[#D4AF37]/30 rounded-full mb-4">
-          <Sparkles className="w-3 h-3 text-[#D4AF37]" />
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-[#D4AF37] font-medium">
-            Atelier de Rochas Naturais & Exóticas
-          </span>
-        </div>
-
         {/* Logo Central Proporcional */}
         <div className="mb-4 sm:mb-6">
           <StoneLogo size="hero" showTagline={false} />
@@ -42,7 +34,7 @@ export const Hero: React.FC = () => {
         {/* Título Principal Sem Gradiente */}
         <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight max-w-3xl tracking-wide mb-3 sm:mb-5 px-2">
           Elegância Esculpida em{' '}
-          <span className="font-normal italic text-[#D4AF37] block sm:inline">
+          <span className="font-editorial italic font-normal text-[#D4AF37] block sm:inline">
             Pedras Nobres & Exóticas
           </span>
         </h1>

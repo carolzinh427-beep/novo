@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Clock, MapPin, Sparkles } from 'lucide-react';
+import { ShieldCheck, Clock, MapPin } from 'lucide-react';
 import { siteConfig } from '../config/site';
 
 export const AboutSection: React.FC = () => {
@@ -32,16 +32,9 @@ export const AboutSection: React.FC = () => {
 
           {/* Lado Direito: Texto Institucional */}
           <div className="lg:col-span-6 space-y-5 pt-4 lg:pt-0">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FAF6E9] border border-[#D4AF37]/30 rounded-full">
-              <Sparkles className="w-3.5 h-3.5 text-[#B89334]" />
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#9E7C1D] font-bold">
-                INSTITUCIONAL STONE GRAN LUX
-              </span>
-            </div>
-
             <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
               Tradição em Rochas Nobres <br />
-              <span className="font-semibold text-[#9E7C1D]">
+              <span className="font-editorial italic font-normal text-[#9E7C1D]">
                 e Tecnologia de Usinagem Laser
               </span>
             </h2>

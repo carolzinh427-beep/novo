@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Cinzel", "Cormorant Garamond", Georgia, serif;
+  --font-editorial: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   
   --color-warm-cream: #FBF9F5;
@@ -21,13 +23,25 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-warm-cream);
-  color: var(--color-graphite-dark);
+  background-color: #0A0A0C;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Luxury Editorial Serif Titles */
-h1, h2, h3, .font-editorial {
+h1, h2, h3, .font-serif {
   font-family: var(--font-serif);
+  letter-spacing: 0.03em;
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant);
 }
 
 /* Glassmorphism Header */

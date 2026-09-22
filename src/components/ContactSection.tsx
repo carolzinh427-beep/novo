@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, MapPin, Clock, Phone, Send, Sparkles } from 'lucide-react';
+import { MessageCircle, MapPin, Clock, Phone, Send } from 'lucide-react';
 import { siteConfig } from '../config/site';
 
 const InstagramIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
@@ -40,16 +40,9 @@ export const ContactSection: React.FC = () => {
         
         {/* Cabeçalho */}
         <div className="max-w-3xl mb-10 sm:mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
-              CONSULTORIA EXCLUSIVA
-            </span>
-          </div>
-
           <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
             Inicie Seu Atendimento com <br />
-            <span className="font-normal italic text-[#D4AF37]">
+            <span className="font-editorial italic font-normal text-[#D4AF37]">
               Especialistas em Pedras Nobres
             </span>
           </h2>
@@ -136,9 +129,6 @@ export const ContactSection: React.FC = () => {
           {/* Lado Direito: Formulário Inteligente */}
           <div className="lg:col-span-7 bg-[#121215] border-2 border-[#D4AF37] p-8 md:p-10 shadow-2xl text-white space-y-6 rounded-sm">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-[#D4AF37] font-bold block mb-1">
-                FORMULÁRIO DE ORÇAMENTO RÁPIDO
-              </span>
               <h3 className="font-serif text-2xl font-bold text-white">Receba uma Cotação Detalhada</h3>
               <p className="text-xs text-gray-400 font-light mt-1">
                 Preencha os dados e receba o orçamento direto no seu WhatsApp em instantes

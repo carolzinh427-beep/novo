@@ -21,13 +21,6 @@ export const DifferentialsSection: React.FC = () => {
           
           {/* Lado Esquerdo: Título Direto e Editorial */}
           <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FAF6E9] border border-[#D4AF37]/30 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#9E7C1D] font-bold">
-                DIFERENCIAIS EXCLUSIVOS
-              </span>
-            </div>
-
             {/* Título sem subtítulo conforme solicitado */}
             <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
               Precisão em Corte CNC

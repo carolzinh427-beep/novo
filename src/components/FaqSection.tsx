@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, Sparkles, MessageCircle } from 'lucide-react';
+import { ChevronDown, MessageCircle } from 'lucide-react';
 import { siteConfig } from '../config/site';
 
 export const FaqSection: React.FC = () => {
@@ -21,16 +21,9 @@ export const FaqSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
-            <HelpCircle className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
-              TIRE SUAS DÚVIDAS
-            </span>
-          </div>
-
           <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
             Perguntas Frequentes <br />
-            <span className="font-normal italic text-[#D4AF37]">
+            <span className="font-editorial italic font-normal text-[#D4AF37]">
               Sobre Nossas Pedras & Serviços
             </span>
           </h2>

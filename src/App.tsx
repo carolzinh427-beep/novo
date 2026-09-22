@@ -7,7 +7,6 @@ import { SolutionsSection } from './components/SolutionsSection';
 import { ProcessSection } from './components/ProcessSection';
 import { AboutSection } from './components/AboutSection';
 import { FaqSection } from './components/FaqSection';
-import { TestimonialsSection } from './components/TestimonialsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsapp } from './components/FloatingWhatsapp';
@@ -36,13 +35,11 @@ export const App: React.FC = () => {
       {/* 5. Institucional & Showroom: FUNDO BRANCO */}
       <AboutSection />
 
+
       {/* 6. Perguntas Frequentes (FAQ): FUNDO PRETO */}
       <FaqSection />
 
-      {/* 7. Depoimentos de Arquitetos & Clientes VIP: FUNDO BRANCO */}
-      <TestimonialsSection />
-
-      {/* 8. Formulário de Contato & Mapa Showroom: FUNDO PRETO */}
+      {/* 7. Formulário de Contato & Mapa Showroom: FUNDO PRETO */}
       <ContactSection />
 
       {/* 9. Footer Minimalista de Luxo: FUNDO PRETO */}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { siteConfig } from '../config/site';
-import { Sparkles } from 'lucide-react';
 
 export const ProcessSection: React.FC = () => {
   return (
@@ -10,16 +9,9 @@ export const ProcessSection: React.FC = () => {
         
         {/* Cabeçalho da Seção */}
         <div className="max-w-3xl mb-12 sm:mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
-              ENGENHARIA & PROCESSO DE ATENDIMENTO VIP
-            </span>
-          </div>
-
           <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
             Do Conceito à Instalação <br />
-            <span className="font-normal italic text-[#D4AF37]">
+            <span className="font-editorial italic font-normal text-[#D4AF37]">
               em 4 Etapas Rigorosas
             </span>
           </h2>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, ChevronRight, Sparkles } from 'lucide-react';
+import { CheckCircle2, ChevronRight } from 'lucide-react';
 import { siteConfig } from '../config/site';
 
 export const SolutionsSection: React.FC = () => {
@@ -18,13 +18,6 @@ export const SolutionsSection: React.FC = () => {
         {/* Header Compacto da Seção */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-4 pb-4 border-b border-neutral-200">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#FAF6E9] border border-[#D4AF37]/30 rounded-full mb-2">
-              <Sparkles className="w-3 h-3 text-[#B89334]" />
-              <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-[#9E7C1D] font-bold">
-                APLICAÇÕES ARQUITETÔNICAS SOB MEDIDA
-              </span>
-            </div>
-
             <h2 className="font-serif text-xl sm:text-3xl font-light leading-tight tracking-tight text-neutral-900">
               Soluções de Luxo para <br className="hidden sm:inline" />
               <span className="font-semibold text-[#9E7C1D]">

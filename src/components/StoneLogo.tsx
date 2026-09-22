@@ -105,15 +105,15 @@ export const StoneLogo: React.FC<StoneLogoProps> = ({
         {/* STONE */}
         <span
           className={`font-serif font-bold text-white uppercase ${stoneTextSizes[size]} drop-shadow-md leading-none`}
-          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+          style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: '0.25em' }}
         >
           STONE
         </span>
         
         {/* GRAN LUX */}
         <span
-          className={`font-serif font-semibold text-[#D4AF37] uppercase ${granLuxTextSizes[size]} mt-1 leading-none`}
-          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+          className={`font-serif font-semibold text-[#D4AF37] uppercase ${granLuxTextSizes[size]} mt-1.5 leading-none`}
+          style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: '0.2em' }}
         >
           GRAN LUX
         </span>
