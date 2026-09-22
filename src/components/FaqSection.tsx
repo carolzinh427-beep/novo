@@ -3,7 +3,8 @@ import { ChevronDown, MessageCircle } from 'lucide-react';
 import { siteConfig } from '../config/site';
 
 export const FaqSection: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [isFaqVisible, setIsFaqVisible] = useState(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -20,10 +21,10 @@ export const FaqSection: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-3">
           <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
             Perguntas Frequentes <br />
-            <span className="font-editorial italic font-normal text-[#D4AF37]">
+            <span className="font-serif text-[#D4AF37] font-normal">
               Sobre Nossas Pedras & Serviços
             </span>
           </h2>
@@ -33,36 +34,49 @@ export const FaqSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Accordion List */}
-        <div className="space-y-4">
-          {siteConfig.faqs.map((faq, idx) => (
-            <div
-              key={idx}
-              className="bg-[#121215] border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all rounded-sm overflow-hidden"
-            >
-              <button
-                onClick={() => toggleFaq(idx)}
-                className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-xl font-bold text-white hover:text-[#D4AF37] transition-colors"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="text-[#D4AF37] font-mono text-xs sm:text-sm">0{idx + 1}</span>
-                  {faq.question.replace(/\?$/, '')}
-                </span>
-                <ChevronDown
-                  className={`w-5 h-5 text-[#D4AF37] shrink-0 transition-transform duration-300 ${
-                    openIndex === idx ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
-
-              {openIndex === idx && (
-                <div className="px-6 pb-6 text-xs sm:text-sm text-gray-300 font-light leading-relaxed border-t border-white/5 pt-4 animate-fade-in">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          ))}
+        {/* Botão de Exibição do FAQ ao Clicar */}
+        <div className="flex justify-center mb-8">
+          <button
+            onClick={() => setIsFaqVisible(!isFaqVisible)}
+            className="inline-flex items-center gap-3 px-6 py-3.5 bg-[#121215] hover:bg-[#1a1a1f] border border-[#D4AF37] text-[#D4AF37] hover:text-white font-serif text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300 shadow-md cursor-pointer rounded-xs"
+          >
+            <span>{isFaqVisible ? 'Ocultar Perguntas' : 'Ver Perguntas Frequentes'}</span>
+            <ChevronDown className={`w-4 h-4 text-[#D4AF37] transition-transform duration-300 ${isFaqVisible ? 'rotate-180' : ''}`} />
+          </button>
         </div>
+
+        {/* Accordion List - Aparece quando clica */}
+        {isFaqVisible && (
+          <div className="space-y-4 animate-fade-in">
+            {siteConfig.faqs.map((faq, idx) => (
+              <div
+                key={idx}
+                className="bg-[#121215] border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all rounded-sm overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleFaq(idx)}
+                  className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-xl font-bold text-white hover:text-[#D4AF37] transition-colors cursor-pointer"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="text-[#D4AF37] font-mono text-xs sm:text-sm">0{idx + 1}</span>
+                    {faq.question.replace(/\?$/, '')}
+                  </span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-[#D4AF37] shrink-0 transition-transform duration-300 ${
+                      openIndex === idx ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+
+                {openIndex === idx && (
+                  <div className="px-6 pb-6 text-xs sm:text-sm text-gray-300 font-light leading-relaxed border-t border-white/5 pt-4 animate-fade-in">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Floating WhatsApp Help Line */}
         <div className="mt-12 text-center bg-black/60 p-6 border border-[#D4AF37]/40 rounded-sm space-y-3">

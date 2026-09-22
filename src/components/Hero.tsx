@@ -1,7 +1,6 @@
 import React from 'react';
 import { MessageCircle, ChevronRight } from 'lucide-react';
 import { siteConfig } from '../config/site';
-import { StoneLogo } from './StoneLogo';
 
 export const Hero: React.FC = () => {
   const getWhatsappUrl = () => {
@@ -26,23 +25,20 @@ export const Hero: React.FC = () => {
       {/* Conteúdo Central Hero */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center text-center">
         
-        {/* Logo Central Proporcional */}
-        <div className="mb-4 sm:mb-6">
-          <StoneLogo size="hero" showTagline={false} />
+        {/* STONE GRAN LUX ocupando o centro com destaque */}
+        <div className="mb-3 sm:mb-4">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-[0.2em] sm:tracking-[0.25em] text-white uppercase drop-shadow-md">
+            STONE GRAN LUX
+          </h1>
         </div>
 
-        {/* Título Principal Sem Gradiente */}
-        <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight max-w-3xl tracking-wide mb-3 sm:mb-5 px-2">
-          Elegância Esculpida em{' '}
-          <span className="font-editorial italic font-normal text-[#D4AF37] block sm:inline">
+        {/* Frase menor embaixo dele, sem chamar mais atenção que o nome, na mesma fonte e em exatamente 2 linhas */}
+        <h2 className="font-serif text-sm sm:text-lg md:text-xl font-light text-gray-300 leading-snug tracking-wider mb-8 sm:mb-10 max-w-lg">
+          Elegância Esculpida em <br />
+          <span className="text-[#D4AF37] font-normal">
             Pedras Nobres & Exóticas
           </span>
-        </h1>
-
-        {/* Subtítulo Confortável e Arejado */}
-        <p className="text-xs sm:text-base text-gray-300 font-light leading-relaxed max-w-xl mb-6 sm:mb-8 px-2 sm:px-0">
-          Transformamos superfícies nobres importadas e quartzitos raros em peças sob medida com corte CNC a laser e precisão milimétrica
-        </p>
+        </h2>
 
         {/* Botões de Ação Elegantes e Sem Gradiente */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-12 px-4 sm:px-0">

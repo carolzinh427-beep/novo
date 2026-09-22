@@ -34,7 +34,7 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-6 space-y-5 pt-4 lg:pt-0">
             <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
               Tradição em Rochas Nobres <br />
-              <span className="font-editorial italic font-normal text-[#9E7C1D]">
+              <span className="font-serif italic font-normal text-[#9E7C1D]">
                 e Tecnologia de Usinagem Laser
               </span>
             </h2>

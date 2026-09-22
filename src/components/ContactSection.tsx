@@ -34,15 +34,15 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contato" className="py-14 sm:py-20 md:py-28 bg-[#0A0A0C] text-white border-t border-b border-[#D4AF37]/30 relative overflow-hidden">
+    <section id="contato" className="py-14 sm:py-20 md:py-28 bg-white text-neutral-900 border-t border-b border-neutral-200 relative overflow-hidden">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
         {/* Cabeçalho */}
         <div className="max-w-3xl mb-10 sm:mb-16 space-y-3">
-          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
+          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
             Inicie Seu Atendimento com <br />
-            <span className="font-editorial italic font-normal text-[#D4AF37]">
+            <span className="text-[#9E7C1D] font-normal">
               Especialistas em Pedras Nobres
             </span>
           </h2>
@@ -53,8 +53,8 @@ export const ContactSection: React.FC = () => {
           {/* Lado Esquerdo: Cards de Informações de Contato */}
           <div className="lg:col-span-5 space-y-8">
             
-            <div className="bg-[#121215] border border-[#D4AF37]/40 p-8 space-y-6 shadow-2xl rounded-sm">
-              <h3 className="font-serif text-2xl font-bold text-white">Atendimento Exclusivo Stone Gran Lux</h3>
+            <div className="bg-neutral-50 border border-neutral-200 p-6 sm:p-8 space-y-6 shadow-sm rounded-sm">
+              <h3 className="font-serif text-2xl font-bold text-neutral-900">Atendimento Exclusivo Stone Gran Lux</h3>
               
               <div className="space-y-4">
                 <a
@@ -70,11 +70,11 @@ export const ContactSection: React.FC = () => {
                   </div>
                 </a>
 
-                <div className="flex items-start gap-4 p-4 bg-black/60 border border-white/10 rounded-xs">
+                <div className="flex items-start gap-4 p-4 bg-white border border-neutral-200 rounded-xs">
                   <Phone className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-gray-400 block">Central de Vendas</span>
-                    <span className="font-semibold text-sm text-white">{siteConfig.phone}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-neutral-500 block">Central de Vendas</span>
+                    <span className="font-semibold text-sm text-neutral-900">{siteConfig.phone}</span>
                   </div>
                 </div>
 
@@ -82,35 +82,35 @@ export const ContactSection: React.FC = () => {
                   href={siteConfig.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-4 bg-black/60 border border-white/10 hover:border-[#D4AF37] transition-colors rounded-xs"
+                  className="flex items-start gap-4 p-4 bg-white border border-neutral-200 hover:border-[#D4AF37] transition-colors rounded-xs"
                 >
                   <InstagramIcon className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-gray-400 block">Instagram de Obras</span>
-                    <span className="font-semibold text-sm text-white">{siteConfig.instagram}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-neutral-500 block">Instagram de Obras</span>
+                    <span className="font-semibold text-sm text-neutral-900">{siteConfig.instagram}</span>
                   </div>
                 </a>
 
-                <div className="flex items-start gap-4 p-4 bg-black/60 border border-white/10 rounded-xs">
+                <div className="flex items-start gap-4 p-4 bg-white border border-neutral-200 rounded-xs">
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-gray-400 block">Showroom Principal</span>
-                    <span className="font-semibold text-sm text-white block">{siteConfig.fullAddress}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-neutral-500 block">Showroom Principal</span>
+                    <span className="font-semibold text-sm text-neutral-900 block">{siteConfig.fullAddress}</span>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 bg-black/60 border border-white/10 rounded-xs">
+                <div className="flex items-start gap-4 p-4 bg-white border border-neutral-200 rounded-xs">
                   <Clock className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-gray-400 block">Horário de Funcionamento</span>
-                    <span className="font-semibold text-xs text-gray-300 block">{siteConfig.hours}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-neutral-500 block">Horário de Funcionamento</span>
+                    <span className="font-semibold text-xs text-neutral-700 block">{siteConfig.hours}</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Google Maps Embed iframe */}
-            <div className="bg-[#121215] border border-[#D4AF37]/30 p-2 aspect-[16/9] shadow-2xl overflow-hidden rounded-sm">
+            <div className="bg-neutral-50 border border-neutral-200 p-2 aspect-[16/9] shadow-sm overflow-hidden rounded-sm">
               <iframe
                 title="Mapa de Localização Stone Gran Lux"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197587842618!2d-46.67139192377402!3d-23.56134886161286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d3d376813b%3A0x8bb8c8c5c3789b70!2sAv.%20Europa%2C%201420%20-%20Jardins%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
@@ -127,10 +127,10 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Lado Direito: Formulário Inteligente */}
-          <div className="lg:col-span-7 bg-[#121215] border-2 border-[#D4AF37] p-8 md:p-10 shadow-2xl text-white space-y-6 rounded-sm">
+          <div className="lg:col-span-7 bg-neutral-50 border-2 border-[#D4AF37] p-6 sm:p-10 shadow-lg text-neutral-900 space-y-6 rounded-sm">
             <div>
-              <h3 className="font-serif text-2xl font-bold text-white">Receba uma Cotação Detalhada</h3>
-              <p className="text-xs text-gray-400 font-light mt-1">
+              <h3 className="font-serif text-2xl font-bold text-neutral-900">Receba uma Cotação Detalhada</h3>
+              <p className="text-xs text-neutral-600 font-light mt-1">
                 Preencha os dados e receba o orçamento direto no seu WhatsApp em instantes
               </p>
             </div>
@@ -138,37 +138,37 @@ export const ContactSection: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-[#D4AF37] font-semibold">Seu Nome Completo</label>
+                  <label className="text-xs uppercase tracking-wider text-neutral-700 font-semibold">Seu Nome Completo</label>
                   <input
                     type="text"
                     required
                     placeholder="Ex: Dra. Patrícia Lima"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-black border border-white/20 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-white"
+                    className="w-full px-4 py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-neutral-900"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-[#D4AF37] font-semibold">Seu WhatsApp</label>
+                  <label className="text-xs uppercase tracking-wider text-neutral-700 font-semibold">Seu WhatsApp</label>
                   <input
                     type="tel"
                     required
                     placeholder="Ex: (11) 99999-8888"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 bg-black border border-white/20 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-white"
+                    className="w-full px-4 py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-neutral-900"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-[#D4AF37] font-semibold">Pedra de Interesse</label>
+                  <label className="text-xs uppercase tracking-wider text-neutral-700 font-semibold">Pedra de Interesse</label>
                   <select
                     value={formData.material}
                     onChange={(e) => setFormData({ ...formData, material: e.target.value })}
-                    className="w-full px-4 py-3 bg-black border border-white/20 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-white"
+                    className="w-full px-4 py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-neutral-900"
                   >
                     {siteConfig.materials.map((m) => (
                       <option key={m.id} value={m.name}>{m.name}</option>
@@ -178,11 +178,11 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-[#D4AF37] font-semibold">Aplicação no Projeto</label>
+                  <label className="text-xs uppercase tracking-wider text-neutral-700 font-semibold">Aplicação no Projeto</label>
                   <select
                     value={formData.solution}
                     onChange={(e) => setFormData({ ...formData, solution: e.target.value })}
-                    className="w-full px-4 py-3 bg-black border border-white/20 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-white"
+                    className="w-full px-4 py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-neutral-900"
                   >
                     {siteConfig.solutions.map((s) => (
                       <option key={s.id} value={s.title}>{s.title}</option>
@@ -192,13 +192,13 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-wider text-[#D4AF37] font-semibold">Mensagem / Medidas do Projeto</label>
+                <label className="text-xs uppercase tracking-wider text-neutral-700 font-semibold">Mensagem / Medidas do Projeto</label>
                 <textarea
                   rows={4}
                   placeholder="Ex: Preciso de uma ilha de cozinha de 3m x 1.20m em Ilha Ônix Rosa com borda em 45º"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-black border border-white/20 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-white"
+                  className="w-full px-4 py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-neutral-900"
                 />
               </div>
 

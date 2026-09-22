@@ -1,16 +1,8 @@
 import React from 'react';
 import { siteConfig } from '../config/site';
-import { Cpu, ShieldCheck, Globe, Sparkles, Clock, Compass, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export const DifferentialsSection: React.FC = () => {
-  const iconMap: Record<string, React.ReactNode> = {
-    Cpu: <Cpu className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />,
-    ShieldCheck: <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />,
-    Globe: <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />,
-    Sparkles: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />,
-    Clock: <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />,
-    Compass: <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />,
-  };
 
   return (
     <section id="diferenciais" className="py-12 sm:py-16 md:py-24 bg-white text-black border-t border-b border-gray-200 relative overflow-hidden">
@@ -25,10 +17,6 @@ export const DifferentialsSection: React.FC = () => {
             <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
               Precisão em Corte CNC
             </h2>
-
-            <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed max-w-md">
-              Não entregamos apenas pedras cortadas Combinamos tecnologia digital a laser com a tradição dos mestres marmoristas para criar peças milimetricamente ajustadas à sua arquitetura
-            </p>
 
             {/* Box Editorial sem aspas, travessão ou ponto */}
             <div className="pt-2">
@@ -48,7 +36,7 @@ export const DifferentialsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Lado Direito: Grid de Quadrados Menores e Compactos */}
+          {/* Lado Direito: Grid de Quadrados Menores e Compactos Sem Desenhos/Emojis */}
           <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
             {siteConfig.differentials.map((diff, idx) => (
               <div
@@ -56,11 +44,7 @@ export const DifferentialsSection: React.FC = () => {
                 className="p-3.5 sm:p-4 bg-neutral-50 hover:bg-white border border-neutral-200 hover:border-[#D4AF37] transition-all duration-300 shadow-xs hover:shadow-md rounded-xs group flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 bg-white border border-[#D4AF37]/40 rounded-xs flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform shadow-2xs">
-                    {iconMap[diff.icon] || <Sparkles className="w-4 h-4 text-[#D4AF37]" />}
-                  </div>
-
-                  <span className="text-[9px] font-serif font-bold text-[#B89334] tracking-widest uppercase block mb-1">
+                  <span className="text-[10px] font-serif font-bold text-[#B89334] tracking-widest uppercase block mb-1">
                     0{idx + 1}
                   </span>
 

@@ -11,7 +11,7 @@ export const ProcessSection: React.FC = () => {
         <div className="max-w-3xl mb-12 sm:mb-16 space-y-3">
           <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
             Do Conceito à Instalação <br />
-            <span className="font-editorial italic font-normal text-[#D4AF37]">
+            <span className="font-serif italic font-normal text-[#D4AF37]">
               em 4 Etapas Rigorosas
             </span>
           </h2>

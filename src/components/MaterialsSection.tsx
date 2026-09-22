@@ -8,7 +8,7 @@ export const MaterialsSection: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [activeModalMaterial, setActiveModalMaterial] = useState<MaterialItem | null>(null);
 
-  const itemsPerPage = 6;
+  const itemsPerPage = 9;
 
   const categories = [
     { id: 'all', label: 'Todas as Pedras' },
@@ -66,10 +66,17 @@ export const MaterialsSection: React.FC = () => {
   return (
     <section id="materiais" className="py-14 sm:py-20 md:py-28 bg-[#0A0A0C] text-white relative overflow-hidden border-t border-[#D4AF37]/20">
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-12 relative z-10">
         
+        {/* Título da Seção: Nosso Catálogo */}
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
+          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
+            Nosso Catálogo
+          </h2>
+        </div>
+
         {/* Filtros e Barra de Pesquisa */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 bg-black/80 p-4 border border-[#D4AF37]/30 rounded-sm shadow-xl">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6 sm:mb-10 bg-black/80 p-3 sm:p-4 border border-[#D4AF37]/30 rounded-sm shadow-xl">
           {/* Tabs de Categoria */}
           <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar">
             {categories.map((cat) => (
@@ -101,7 +108,7 @@ export const MaterialsSection: React.FC = () => {
         </div>
 
         {/* Status de Exibição */}
-        <div className="flex items-center justify-between text-xs text-gray-400 mb-6 px-1">
+        <div className="flex items-center justify-between text-xs text-gray-400 mb-4 sm:mb-6 px-1">
           <span>
             Exibindo <strong className="text-[#F7E7AD]">{filteredMaterials.length === 0 ? 0 : (currentPage - 1) * itemsPerPage + 1}</strong> a <strong className="text-[#F7E7AD]">{Math.min(currentPage * itemsPerPage, filteredMaterials.length)}</strong> de <strong className="text-[#F7E7AD]">{filteredMaterials.length}</strong> pedras encontradas
           </span>
@@ -122,47 +129,45 @@ export const MaterialsSection: React.FC = () => {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6 md:gap-8 mb-10 sm:mb-12">
             {paginatedMaterials.map((mat) => (
               <div
                 key={mat.id}
-                className="group bg-[#121215] border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-2xl relative rounded-sm hover:-translate-y-1"
+                onClick={() => setActiveModalMaterial(mat)}
+                className="group bg-[#121215] border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xl relative rounded-xs hover:-translate-y-1 cursor-pointer"
               >
-                {/* Corner Motifs */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#D4AF37] z-20" />
-                <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#D4AF37] z-20" />
-                <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#D4AF37] z-20" />
-                <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#D4AF37] z-20" />
+                {/* Corner Motifs (Desktop) */}
+                <div className="hidden sm:block absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#D4AF37] z-20" />
+                <div className="hidden sm:block absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#D4AF37] z-20" />
+                <div className="hidden sm:block absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#D4AF37] z-20" />
+                <div className="hidden sm:block absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#D4AF37] z-20" />
 
                 <div>
                   {/* Image Container with Zoom & Badge */}
-                  <div
-                    className="relative aspect-[16/10] img-zoom-container bg-black overflow-hidden cursor-pointer"
-                    onClick={() => setActiveModalMaterial(mat)}
-                  >
+                  <div className="relative aspect-square sm:aspect-[16/10] img-zoom-container bg-black overflow-hidden">
                     <img
                       src={mat.image}
                       alt={`Pedra Nobre Stone Gran Lux - ${mat.name}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent sm:via-black/20 opacity-70 group-hover:opacity-40 transition-opacity" />
                     
-                    {/* Badge de Status / Raraidade */}
-                    <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest text-black bg-[#D4AF37] px-2.5 py-1 shadow-sm">
+                    {/* Badge de Status / Raraidade (Desktop) */}
+                    <span className="hidden sm:block absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest text-black bg-[#D4AF37] px-2.5 py-1 shadow-sm">
                       {mat.specs.rarity}
                     </span>
 
-                    {/* Overlay de Ampliação */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 backdrop-blur-xs">
+                    {/* Overlay de Ampliação (Desktop) */}
+                    <div className="hidden sm:flex absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 backdrop-blur-xs">
                       <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-black/90 border border-[#D4AF37] text-[#D4AF37] text-[11px] uppercase tracking-widest">
                         <Eye className="w-3.5 h-3.5 text-[#D4AF37]" />
                         Ver Ficha Completa
                       </span>
                     </div>
 
-                    {/* Tag do Nome */}
-                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                    {/* Tag do Nome (Desktop) */}
+                    <div className="hidden sm:flex absolute bottom-3 left-3 right-3 items-center justify-between">
                       <span className="font-serif text-base sm:text-lg font-bold tracking-wider text-white drop-shadow-md">
                         {mat.name}
                       </span>
@@ -172,8 +177,15 @@ export const MaterialsSection: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Conteúdo do Card */}
-                  <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+                  {/* Mobile Only: Apenas o nome da pedra */}
+                  <div className="p-1 sm:p-2 sm:hidden text-center bg-[#121215]">
+                    <p className="font-serif text-[11px] font-medium text-white truncate leading-tight">
+                      {mat.name}
+                    </p>
+                  </div>
+
+                  {/* Desktop Only: Conteúdo Detalhado do Card */}
+                  <div className="hidden sm:block p-4 sm:p-6 space-y-3 sm:space-y-4">
                     <p className="text-[11px] sm:text-xs uppercase tracking-wider text-[#D4AF37] font-medium border-b border-white/10 pb-2">
                       {mat.subtitle}
                     </p>
@@ -206,12 +218,13 @@ export const MaterialsSection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Botão de Cotação */}
-                <div className="p-4 sm:p-6 pt-0 space-y-2">
+                {/* Desktop Only: Botão de Cotação */}
+                <div className="hidden sm:block p-4 sm:p-6 pt-0 space-y-2">
                   <a
                     href={getWhatsappMaterialUrl(mat.name)}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                     className="w-full py-2.5 sm:py-3 px-4 bg-[#D4AF37] hover:bg-[#C5A059] text-black font-semibold text-xs uppercase tracking-[0.15em] flex items-center justify-between group/btn shadow-sm transition-colors duration-300"
                   >
                     <span className="flex items-center gap-2">
