@@ -118,6 +118,10 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
   const reducedRef = useRef(false);
 
   const [active, setActive] = useState(0);
+  const [cardDims, setCardDims] = useState<{ width: number; height: number }>({
+    width: cardWidth,
+    height: cardHeight
+  });
 
   onChangeRef.current = onChange;
   cfgRef.current = {
@@ -143,7 +147,6 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
     const dir = cfg.tiltDirection === 'left' ? -1 : 1;
     const sc = scaleRef.current;
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-    const mobileOffset = 0; // Centered on mobile
 
     for (let i = 0; i < n; i++) {
       const el = cardRefs.current[i];
@@ -155,29 +158,61 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
         if (d > n / 2) d -= n;
       }
 
-      const back = Math.max(0, d);
       const az = Math.abs(d);
-      const shown = az <= cfg.visibleCards + 0.5;
+      let tz: number;
+      let tx: number;
+      let ry: number;
+      let opacity: number;
+      let brightness: number;
+      let blurPx: number;
 
-      const tz = -cfg.depth * d;
-      const tx = dir * cfg.spread * d + mobileOffset;
-      const ry = dir * cfg.tilt * clamp(d, 0, 1);
+      if (isMobile) {
+        // Mobile: 100% Centralizado e Simétrico
+        const sign = d < 0 ? -1 : d > 0 ? 1 : 0;
+        tx = sign * Math.min(az * cfg.spread, cfg.cardWidth * 0.35);
+        tz = -cfg.depth * az;
+        ry = -sign * cfg.tilt * Math.min(az, 1);
 
-      let opacity = d < 0 ? Math.max(0, 1 + d) : 1;
-      if (!shown) opacity = 0;
+        if (az < 0.3) {
+          opacity = 1;
+          brightness = 1;
+          blurPx = 0;
+        } else if (az <= 1.25) {
+          opacity = Math.max(0.18, 1 - az * 0.7);
+          brightness = Math.max(0.4, 1 - az * 0.35);
+          blurPx = Math.min(cfg.blur, az * 2);
+        } else {
+          opacity = 0;
+          brightness = 0.2;
+          blurPx = cfg.blur;
+        }
+      } else {
+        // Desktop: layout original com profundidade à direita
+        const back = Math.max(0, d);
+        const shown = az <= cfg.visibleCards + 0.5;
+        tz = -cfg.depth * d;
+        tx = dir * cfg.spread * d;
+        ry = dir * cfg.tilt * clamp(d, 0, 1);
 
-      const brightness = Math.max(0.15, 1 - back * cfg.falloff);
-      const blurPx = cfg.blur > 0 ? Math.min(cfg.blur, (back / Math.max(1, cfg.visibleCards)) * cfg.blur) : 0;
-      const zi = Math.round(2000 - d * 20);
+        opacity = d < 0 ? Math.max(0, 1 + d) : 1;
+        if (!shown) opacity = 0;
+
+        brightness = Math.max(0.15, 1 - back * cfg.falloff);
+        blurPx = cfg.blur > 0 ? Math.min(cfg.blur, (back / Math.max(1, cfg.visibleCards)) * cfg.blur) : 0;
+      }
+
+      const zi = Math.round(2000 - az * 20);
 
       el.style.transform = `translate(-50%, -50%) scale(${sc}) translateX(${tx.toFixed(2)}px) translateZ(${tz.toFixed(2)}px) rotateY(${ry.toFixed(3)}deg)`;
       el.style.opacity = opacity.toFixed(3);
       el.style.filter = `brightness(${brightness.toFixed(3)}) blur(${blurPx.toFixed(2)}px)`;
       el.style.zIndex = String(zi);
-      el.style.pointerEvents = shown && opacity > 0.05 ? 'auto' : 'none';
+      el.style.pointerEvents = opacity > 0.1 ? 'auto' : 'none';
 
       const ov = overlayRefs.current[i];
-      if (ov) ov.style.opacity = clamp(back * cfg.falloff * 1.25, 0, 0.86).toFixed(3);
+      if (ov) {
+        ov.style.opacity = clamp(az * cfg.falloff * 1.25, 0, 0.86).toFixed(3);
+      }
     }
   }, []);
 
@@ -241,19 +276,41 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
     const ro = new ResizeObserver(entries => {
       if (!entries[0]) return;
       const w = entries[0].contentRect.width;
+      const h = entries[0].contentRect.height;
       const cfg = cfgRef.current;
       const isMobile = w < 640;
-      cfg.spread = isMobile ? 24 : spread;
-      cfg.depth = isMobile ? 100 : depth;
-      cfg.tilt = isMobile ? 14 : tilt;
-      cfg.visibleCards = isMobile ? 2 : visibleCards;
-      const needed = (isMobile ? cfg.cardWidth * 0.82 : cfg.cardWidth) + Math.abs(cfg.spread) * 2 + (isMobile ? 16 : 80);
-      scaleRef.current = clamp(w / needed, 0.48, 1);
+
+      let curW = cardWidth;
+      let curH = cardHeight;
+
+      if (isMobile) {
+        // Largura adaptada ao viewport e altura em proporção cinematográfica para não cortar fotos
+        curW = Math.min(cardWidth, Math.max(260, w - 52));
+        curH = Math.min(Math.round(curW * 0.65), Math.max(170, h - 80));
+        cfg.cardWidth = curW;
+        cfg.spread = 22;
+        cfg.depth = 75;
+        cfg.tilt = 12;
+        cfg.visibleCards = 2;
+        scaleRef.current = 1;
+      } else {
+        curW = cardWidth;
+        curH = cardHeight;
+        cfg.cardWidth = curW;
+        cfg.spread = spread;
+        cfg.depth = depth;
+        cfg.tilt = tilt;
+        cfg.visibleCards = visibleCards;
+        const needed = cfg.cardWidth + Math.abs(cfg.spread) * 2 + 80;
+        scaleRef.current = clamp(w / needed, 0.6, 1);
+      }
+
+      setCardDims({ width: curW, height: curH });
       layout(posRef.current);
     });
     ro.observe(root);
     return () => ro.disconnect();
-  }, [layout, spread, depth, tilt, visibleCards]);
+  }, [layout, spread, depth, tilt, visibleCards, cardWidth, cardHeight]);
 
   useEffect(() => {
     const el = rootRef.current;
@@ -429,7 +486,7 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
             ref={el => {
               cardRefs.current[i] = el;
             }}
-            style={{ width: cardWidth, height: cardHeight, borderRadius: radius }}
+            style={{ width: cardDims.width, height: cardDims.height, borderRadius: radius }}
             aria-roledescription="slide"
             aria-label={`${i + 1} of ${count}`}
             aria-hidden={active !== i}

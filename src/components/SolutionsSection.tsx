@@ -46,14 +46,14 @@ export const SolutionsSection: React.FC = () => {
         </div>
 
         {/* DepthCarousel 3D React Bits sem fundo preto, mais compacto e centralizado no celular */}
-        <div className="w-full h-[270px] sm:h-[380px] md:h-[460px] relative overflow-hidden flex items-center justify-center">
+        <div className="w-full h-[330px] sm:h-[400px] md:h-[460px] relative overflow-hidden flex items-center justify-center">
           <DepthCarousel
             items={carouselItems}
-            cardWidth={280}
-            cardHeight={350}
+            cardWidth={320}
+            cardHeight={380}
             radius={14}
             depth={180}
-            spread={70}
+            spread={75}
             tilt={20}
             tiltDirection="right"
             perspective={1400}

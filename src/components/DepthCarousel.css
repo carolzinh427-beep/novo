@@ -160,15 +160,37 @@
 }
 
 @media (max-width: 640px) {
+  .depth-carousel {
+    min-height: 270px;
+  }
   .depth-carousel__arrow {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
+    background: rgba(14, 16, 22, 0.85);
   }
   .depth-carousel__arrow--prev {
-    left: 6px;
+    left: 8px;
   }
   .depth-carousel__arrow--next {
-    right: 6px;
+    right: 8px;
+  }
+  .depth-carousel__dots {
+    bottom: 8px;
+    padding: 4px 10px;
+    gap: 6px;
+  }
+  .depth-carousel__dot {
+    width: 6px;
+    height: 6px;
+  }
+  .depth-carousel__dot.is-active {
+    width: 18px;
+  }
+  .depth-carousel__card-badge {
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    padding: 6px 10px;
   }
 }
 
