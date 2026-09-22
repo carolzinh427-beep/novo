@@ -139,7 +139,7 @@ export const siteConfig: SiteConfig = {
       category: "exoticos",
       subtitle: "Fusion Wow, Titanium Gold & Blue Patagonia",
       description: "Coleção de blocos selecionados à mão com composições minerais inacreditáveis. Misturas dramáticas de azuis profundos, veios de ouro e espirais negras que parecem pinturas vivas.",
-      image: "/images/material_onyx.jpg",
+      image: "/images/granitos_exoticos.jpg",
       features: [
         "Padrão orgânico exclusivo e irrepetível",
         "Dureza extrema e altíssima resistência",
@@ -339,7 +339,7 @@ export const siteConfig: SiteConfig = {
       category: "exoticos",
       subtitle: "Exótico Monumental Azul Profundo & Cristais Ouro",
       description: "Rocha exótica vulcânica com blocos de quartzo azul lápis-lazúli fundidos em veios dourados e pretos. Uma verdadeira joia da natureza.",
-      image: "/images/material_onyx.jpg",
+      image: "/images/blue_patagonia.jpg",
       features: [
         "Superfície joia com seções translúcidas",
         "Impacto visual imponente no ambiente",
@@ -359,7 +359,7 @@ export const siteConfig: SiteConfig = {
       category: "granitos",
       subtitle: "Preto Maciço Puríssimo Sem Variações",
       description: "O granito negro de maior pureza do planeta. Ausência total de veios ou manchas, oferecendo um espelho preto absoluto.",
-      image: "/images/hero_black_gold_marble.jpg",
+      image: "/images/preto_absoluto.jpg",
       features: [
         "Visual monobloco contemporâneo",
         "Resistência incomparável a riscos",
@@ -379,7 +379,7 @@ export const siteConfig: SiteConfig = {
       category: "granitos",
       subtitle: "Branco Suave com Movimentos de Cinza Mineral",
       description: "Granito claro refinado com pontilhados cinzentos e lilás sutis. Oferece alta luminosidade com durabilidade extrema.",
-      image: "/images/material_marble.jpg",
+      image: "/images/branco_dallas.jpg",
       features: [
         "Excelente relação estética e custo-benefício",
         "Fácil manutenção no dia a dia",
@@ -399,7 +399,7 @@ export const siteConfig: SiteConfig = {
       category: "granitos",
       subtitle: "Verde Musgo Escuro com Cristais Dourados",
       description: "Rocha natural verde escuro quase negra com partículas douradas reluzentes. Tradicional e altamente resistente.",
-      image: "/images/verde_guatemala.jpg",
+      image: "/images/verde_ubatuba.jpg",
       features: [
         "Resistente a calor e manchas de graxa",
         "Efeito cintilante sob sol ou iluminação",
@@ -419,7 +419,7 @@ export const siteConfig: SiteConfig = {
       category: "granitos",
       subtitle: "Tom Marrom Cacau Profundo e Homogêneo",
       description: "Granito nobre em tom marrom café com grãos finos. Traz sofisticação sutil e calor aos ambientes residenciais.",
-      image: "/images/material_granite.jpg",
+      image: "/images/marrom_absoluto.jpg",
       features: [
         "Estética terrosa elegante",
         "Combina perfeitamente com madeira nobre",
@@ -439,7 +439,7 @@ export const siteConfig: SiteConfig = {
       category: "granitos",
       subtitle: "Aquecimento Dourado com Grãos Castanhos",
       description: "Granito dourado de fundo bege com salpicos castanhos e prateados. Traz calor e vida para espaços sociais.",
-      image: "/images/onix_branco.jpg",
+      image: "/images/amarelo_ornamental.jpg",
       features: [
         "Tom dourado acolhedor",
         "Alta durabilidade em ambientes externos",
