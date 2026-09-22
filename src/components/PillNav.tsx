@@ -26,7 +26,7 @@ export interface PillNavProps {
 }
 
 export const PillNav: React.FC<PillNavProps> = ({
-  logo = '/images/stone_logo.svg',
+  logo = '/images/logo_stone_gran_lux.png',
   logoAlt = 'Stone Gran Lux',
   items,
   activeHref = '#inicio',

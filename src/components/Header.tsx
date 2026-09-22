@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
 
   return (
     <PillNav
-      logo="/images/stone_logo.svg"
+      logo="/images/logo_stone_gran_lux.png"
       logoAlt="Stone Gran Lux"
       items={navItems}
       activeHref={activeHref}

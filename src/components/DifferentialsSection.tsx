@@ -46,8 +46,8 @@ export const DifferentialsSection: React.FC = () => {
                 pixelColor="#D4AF37"
                 animationStepDuration={0.35}
                 autoPlay={true}
-                autoInterval={4200}
-                autoDelay={idx * 600}
+                autoInterval={7800}
+                autoDelay={idx * 900}
                 aspectRatio="90%"
                 className="shadow-xs hover:shadow-md transition-shadow rounded-xs cursor-pointer group"
                 firstContent={

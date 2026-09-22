@@ -1,7 +1,6 @@
 import React from 'react';
 import { MessageCircle, ArrowUp } from 'lucide-react';
 import { siteConfig } from '../config/site';
-import { StoneLogo } from './StoneLogo';
 
 const InstagramIcon: React.FC<{ className?: string }> = ({ className = "w-4 h-4" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -30,7 +29,11 @@ export const Footer: React.FC = () => {
           {/* Coluna 1: Logo & Brand Description */}
           <div className="md:col-span-5 space-y-6">
             <a href="#inicio" className="group inline-flex items-center gap-3">
-              <StoneLogo size="sm" />
+              <img
+                src="/images/logo_stone_gran_lux.png"
+                alt="Stone Gran Lux"
+                className="w-28 sm:w-36 h-auto object-contain rounded-md border border-[#D4AF37]/30"
+              />
             </a>
 
             <p className="text-xs text-gray-400 font-light leading-relaxed max-w-sm">

@@ -45,8 +45,8 @@ export const SolutionsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* DepthCarousel 3D React Bits */}
-        <div className="w-full h-[400px] sm:h-[460px] md:h-[500px] relative overflow-hidden bg-neutral-950 rounded-lg shadow-xl border border-neutral-800">
+        {/* DepthCarousel 3D React Bits sem fundo preto, fluindo perfeitamente com a seção */}
+        <div className="w-full h-[360px] sm:h-[440px] md:h-[480px] relative overflow-hidden">
           <DepthCarousel
             items={carouselItems}
             cardWidth={300}
