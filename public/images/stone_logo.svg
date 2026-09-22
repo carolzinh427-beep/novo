@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E7BE"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8A6D23"/>
+    </linearGradient>
+  </defs>
+  <!-- Diamond / Architectural Stone Facet -->
+  <polygon points="50,10 88,38 50,90 12,38" fill="none" stroke="url(#gold)" stroke-width="4"/>
+  <polygon points="50,10 50,90" stroke="url(#gold)" stroke-width="2.5" stroke-dasharray="2 2"/>
+  <polygon points="12,38 88,38" stroke="url(#gold)" stroke-width="3"/>
+  <polygon points="50,10 32,38 50,75 68,38" fill="url(#gold)" opacity="0.4"/>
+  <circle cx="50" cy="38" r="4" fill="#FFFFFF"/>
+</svg>

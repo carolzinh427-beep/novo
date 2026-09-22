@@ -142,6 +142,8 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
     if (!n) return;
     const dir = cfg.tiltDirection === 'left' ? -1 : 1;
     const sc = scaleRef.current;
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+    const mobileOffset = isMobile ? -dir * (cfg.spread * 0.75) : 0;
 
     for (let i = 0; i < n; i++) {
       const el = cardRefs.current[i];
@@ -158,7 +160,7 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
       const shown = az <= cfg.visibleCards + 0.5;
 
       const tz = -cfg.depth * d;
-      const tx = dir * cfg.spread * d;
+      const tx = dir * cfg.spread * d + mobileOffset;
       const ry = dir * cfg.tilt * clamp(d, 0, 1);
 
       let opacity = d < 0 ? Math.max(0, 1 + d) : 1;
@@ -240,13 +242,18 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
       if (!entries[0]) return;
       const w = entries[0].contentRect.width;
       const cfg = cfgRef.current;
-      const needed = cfg.cardWidth + Math.abs(cfg.spread) * 2 + 120;
-      scaleRef.current = clamp(w / needed, 0.45, 1);
+      const isMobile = w < 640;
+      cfg.spread = isMobile ? 38 : spread;
+      cfg.depth = isMobile ? 140 : depth;
+      cfg.tilt = isMobile ? 18 : tilt;
+      cfg.visibleCards = isMobile ? 3 : visibleCards;
+      const needed = cfg.cardWidth + Math.abs(cfg.spread) * 2 + (isMobile ? 30 : 100);
+      scaleRef.current = clamp(w / needed, 0.52, 1);
       layout(posRef.current);
     });
     ro.observe(root);
     return () => ro.disconnect();
-  }, [layout]);
+  }, [layout, spread, depth, tilt, visibleCards]);
 
   useEffect(() => {
     const el = rootRef.current;
