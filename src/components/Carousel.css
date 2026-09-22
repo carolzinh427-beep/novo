@@ -1,0 +1,210 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 16px;
+  padding: 16px;
+  --outer-r: 16px;
+  --p-distance: 8px;
+  background-color: #0E0E12;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-track {
+  display: flex;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+
+.carousel-item {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: calc(var(--outer-r) - var(--p-distance));
+  background-color: #15151A;
+  overflow: hidden;
+  cursor: grab;
+  min-height: 220px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.carousel-item:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.carousel-item:active {
+  cursor: grabbing;
+}
+
+.carousel-container.round {
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.carousel-item.round {
+  background-color: #15151A;
+  position: relative;
+  bottom: 0.1em;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-item-header.round {
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-indicators-container.round {
+  position: absolute;
+  z-index: 2;
+  bottom: 3em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-indicator.active {
+  background-color: #D4AF37;
+  transform: scale(1.25);
+}
+
+.carousel-indicator.inactive {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-item-header {
+  margin-bottom: 12px;
+  padding: 16px 16px 0 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.carousel-icon-container {
+  display: flex;
+  height: 34px;
+  width: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #D4AF37;
+  color: #0A0A0C;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.carousel-step-tag {
+  font-family: var(--font-serif, serif);
+  font-size: 11px;
+  font-weight: 700;
+  color: #D4AF37;
+  letter-spacing: 0.12em;
+}
+
+.carousel-icon {
+  height: 18px;
+  width: 18px;
+  color: #0A0A0C;
+}
+
+.carousel-item-content {
+  padding: 0 16px 16px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item-title {
+  margin-bottom: 6px;
+  font-family: var(--font-serif, serif);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #FFFFFF;
+  letter-spacing: 0.04em;
+}
+
+.carousel-item-description {
+  font-size: 12px;
+  line-height: 1.55;
+  color: #CBD5E1;
+  font-weight: 300;
+}
+
+.carousel-indicators-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.carousel-indicators {
+  display: flex;
+  width: auto;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.carousel-indicator {
+  height: 7px;
+  width: 7px;
+  border: none;
+  padding: 0;
+  appearance: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.carousel-indicator:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .carousel-container {
+    padding: 12px;
+    --outer-r: 14px;
+    --p-distance: 6px;
+  }
+  .carousel-item {
+    min-height: 195px;
+  }
+  .carousel-item-header {
+    padding: 12px 12px 0 12px;
+    margin-bottom: 8px;
+  }
+  .carousel-icon-container {
+    height: 30px;
+    width: 30px;
+  }
+  .carousel-icon {
+    height: 16px;
+    width: 16px;
+  }
+  .carousel-item-content {
+    padding: 0 12px 12px 12px;
+  }
+  .carousel-item-title {
+    font-size: 13px;
+  }
+  .carousel-item-description {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}

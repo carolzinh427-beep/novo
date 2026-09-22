@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
               <img
                 src="/images/logo_stone_gran_lux.png"
                 alt="Stone Gran Lux"
-                className="w-28 sm:w-36 h-auto object-contain rounded-md border border-[#D4AF37]/30"
+                className="w-28 sm:w-36 h-auto object-contain"
               />
             </a>
 

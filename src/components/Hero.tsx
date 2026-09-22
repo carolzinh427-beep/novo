@@ -27,11 +27,12 @@ export const Hero: React.FC = () => {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center text-center">
         
         {/* Logo Oficial Exatamente Igual */}
+        {/* Logo Oficial Sem Fundo, Flutuando com Drop Shadow Dourado */}
         <div className="mb-2 sm:mb-4 flex flex-col items-center">
           <img
             src="/images/logo_stone_gran_lux.png"
             alt="Stone Gran Lux Logo Oficial"
-            className="w-24 sm:w-36 md:w-44 h-auto object-contain drop-shadow-[0_4px_24px_rgba(212,175,55,0.45)] rounded-lg border border-[#D4AF37]/35 mb-1"
+            className="w-24 sm:w-36 md:w-44 h-auto object-contain drop-shadow-[0_4px_24px_rgba(212,175,55,0.45)] mb-1"
           />
           <h1 className="sr-only">STONE GRAN LUX</h1>
         </div>
@@ -39,7 +40,7 @@ export const Hero: React.FC = () => {
         {/* H2 Semântico para SEO */}
         <h2 className="sr-only">Elegância Esculpida em Pedras Nobres & Exóticas</h2>
 
-        {/* Frase menor embaixo dele, com o componente FoldText e tipografia nobre italiana sem cara de IA */}
+        {/* Frase menor embaixo dele, com o componente FoldText e tipografia nobre Cinzel */}
         <div className="mb-5 sm:mb-8 max-w-lg flex flex-col items-center justify-center text-center">
           <FoldText
             text="Elegância Esculpida em"
@@ -49,9 +50,9 @@ export const Hero: React.FC = () => {
             duration={0.7}
             stagger={0.05}
             fontSize="clamp(0.85rem, 2.2vw, 1.25rem)"
-            fontWeight={400}
+            fontWeight={500}
             color="#EAE6DD"
-            style={{ fontFamily: "'Italiana', Georgia, serif", letterSpacing: '0.06em' }}
+            style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: '0.08em' }}
           />
           <FoldText
             text="Pedras Nobres & Exóticas"
@@ -61,9 +62,9 @@ export const Hero: React.FC = () => {
             duration={0.7}
             stagger={0.05}
             fontSize="clamp(0.95rem, 2.5vw, 1.4rem)"
-            fontWeight={400}
+            fontWeight={600}
             color="#D4AF37"
-            style={{ fontFamily: "'Italiana', Georgia, serif", letterSpacing: '0.06em' }}
+            style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: '0.08em' }}
             className="mt-0.5"
           />
         </div>

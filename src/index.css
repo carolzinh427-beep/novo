@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-editorial: "Cormorant Garamond", Georgia, serif;
-  --font-cormorant: "Cormorant Garamond", Georgia, serif;
-  --font-italiana: "Italiana", Georgia, serif;
-  --font-marcellus: "Marcellus", Georgia, serif;
+  --font-serif: "Cinzel", "Times New Roman", Georgia, serif;
+  --font-editorial: "Cinzel", "Times New Roman", Georgia, serif;
+  --font-cormorant: "Cinzel", "Times New Roman", Georgia, serif;
+  --font-italiana: "Cinzel", "Times New Roman", Georgia, serif;
+  --font-marcellus: "Cinzel", "Times New Roman", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   
   --color-warm-cream: #FBF9F5;
@@ -18,6 +18,10 @@
   --color-muted-slate: #6B6862;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .font-italiana {
   font-family: var(--font-italiana);
 }
@@ -26,9 +30,12 @@
   font-family: var(--font-marcellus);
 }
 
-/* Custom Base Styles */
+/* Custom Base Styles & Mobile Anti-Shake */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 body {
@@ -38,6 +45,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
 }
 
 /* Luxury Editorial Serif Titles */

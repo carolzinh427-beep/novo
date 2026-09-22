@@ -143,7 +143,7 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
     const dir = cfg.tiltDirection === 'left' ? -1 : 1;
     const sc = scaleRef.current;
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-    const mobileOffset = isMobile ? -dir * (cfg.spread * 0.75) : 0;
+    const mobileOffset = 0; // Centered on mobile
 
     for (let i = 0; i < n; i++) {
       const el = cardRefs.current[i];
@@ -243,12 +243,12 @@ export const DepthCarousel: React.FC<DepthCarouselProps> = ({
       const w = entries[0].contentRect.width;
       const cfg = cfgRef.current;
       const isMobile = w < 640;
-      cfg.spread = isMobile ? 38 : spread;
-      cfg.depth = isMobile ? 140 : depth;
-      cfg.tilt = isMobile ? 18 : tilt;
-      cfg.visibleCards = isMobile ? 3 : visibleCards;
-      const needed = cfg.cardWidth + Math.abs(cfg.spread) * 2 + (isMobile ? 30 : 100);
-      scaleRef.current = clamp(w / needed, 0.52, 1);
+      cfg.spread = isMobile ? 24 : spread;
+      cfg.depth = isMobile ? 100 : depth;
+      cfg.tilt = isMobile ? 14 : tilt;
+      cfg.visibleCards = isMobile ? 2 : visibleCards;
+      const needed = (isMobile ? cfg.cardWidth * 0.82 : cfg.cardWidth) + Math.abs(cfg.spread) * 2 + (isMobile ? 16 : 80);
+      scaleRef.current = clamp(w / needed, 0.48, 1);
       layout(posRef.current);
     });
     ro.observe(root);

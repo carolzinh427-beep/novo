@@ -29,10 +29,10 @@ export const SolutionsSection: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-12">
         
-        {/* Header Elegante da Seção */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4 pb-4 border-b border-neutral-200">
-          <div>
-            <h2 className="font-serif text-xl sm:text-3xl md:text-4xl font-light leading-tight tracking-tight text-neutral-900">
+        {/* Header Elegante da Seção - Centralizado no Celular */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-12 gap-4 pb-4 border-b border-neutral-200 text-center md:text-left">
+          <div className="w-full md:w-auto">
+            <h2 className="font-serif text-xl sm:text-3xl md:text-4xl font-light leading-tight tracking-tight text-neutral-900 mx-auto">
               Soluções de Luxo para <br className="hidden sm:inline" />
               <span className="font-semibold text-[#9E7C1D]">
                 Cada Ambiente da Sua Residência
@@ -40,21 +40,21 @@ export const SolutionsSection: React.FC = () => {
             </h2>
           </div>
 
-          <p className="text-xs sm:text-sm text-neutral-600 max-w-md font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-600 max-w-md font-light leading-relaxed mx-auto md:mx-0">
             De bancadas gourmets com cubas ocultas a painéis verticais retroiluminados em pedra natural Navegue pelo carrossel para explorar cada projeto
           </p>
         </div>
 
-        {/* DepthCarousel 3D React Bits sem fundo preto, fluindo perfeitamente com a seção */}
-        <div className="w-full h-[360px] sm:h-[440px] md:h-[480px] relative overflow-hidden">
+        {/* DepthCarousel 3D React Bits sem fundo preto, mais compacto e centralizado no celular */}
+        <div className="w-full h-[270px] sm:h-[380px] md:h-[460px] relative overflow-hidden flex items-center justify-center">
           <DepthCarousel
             items={carouselItems}
-            cardWidth={300}
-            cardHeight={380}
+            cardWidth={280}
+            cardHeight={350}
             radius={14}
-            depth={220}
-            spread={85}
-            tilt={22}
+            depth={180}
+            spread={70}
+            tilt={20}
             tiltDirection="right"
             perspective={1400}
             visibleCards={4}
@@ -70,7 +70,7 @@ export const SolutionsSection: React.FC = () => {
         </div>
 
         {/* Detalhes do Ambiente Ativo em Foco */}
-        <div className="mt-8 max-w-4xl mx-auto p-5 sm:p-7 bg-neutral-50 border border-[#D4AF37]/40 rounded-sm shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-500">
+        <div className="mt-5 sm:mt-8 max-w-4xl mx-auto p-4 sm:p-7 bg-neutral-50 border border-[#D4AF37]/40 rounded-sm shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-5 sm:gap-6 transition-all duration-500">
           <div className="space-y-2 flex-1">
             <div className="flex items-center gap-2">
               <span className="text-[10px] sm:text-xs uppercase font-bold tracking-widest text-[#9E7C1D]">

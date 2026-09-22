@@ -13,7 +13,7 @@ import { FloatingWhatsapp } from './components/FloatingWhatsapp';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden w-full max-w-full relative">
       {/* Header Fixo Transparente / Dark Glass */}
       <Header />
 
