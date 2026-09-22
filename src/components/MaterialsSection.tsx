@@ -64,11 +64,8 @@ export const MaterialsSection: React.FC = () => {
   };
 
   return (
-    <section id="materiais" className="py-24 md:py-32 bg-[#0A0A0C] text-white relative overflow-hidden border-t border-[#D4AF37]/20">
+    <section id="materiais" className="py-14 sm:py-20 md:py-28 bg-[#0A0A0C] text-white relative overflow-hidden border-t border-[#D4AF37]/20">
       
-      {/* Subtle Marble Texture Glow in Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.08),transparent_50%)] pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Filtros e Barra de Pesquisa */}
@@ -79,9 +76,9 @@ export const MaterialsSection: React.FC = () => {
               <button
                 key={cat.id}
                 onClick={() => handleCategoryChange(cat.id)}
-                className={`px-4 py-2 text-xs uppercase tracking-[0.15em] font-medium whitespace-nowrap transition-all duration-300 border ${
+                className={`px-3 sm:px-4 py-2 text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium whitespace-nowrap transition-all duration-300 border ${
                   selectedCategory === cat.id
-                    ? 'bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] text-black border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.4)]'
+                    ? 'bg-[#D4AF37] text-black border-[#D4AF37] font-semibold shadow-sm'
                     : 'bg-black/40 text-gray-400 border-white/10 hover:border-[#D4AF37]/50 hover:text-white'
                 }`}
               >
@@ -152,21 +149,21 @@ export const MaterialsSection: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
                     
                     {/* Badge de Status / Raraidade */}
-                    <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest text-black bg-gradient-to-r from-[#F7E7AD] to-[#D4AF37] px-2.5 py-1 shadow-md">
+                    <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest text-black bg-[#D4AF37] px-2.5 py-1 shadow-sm">
                       {mat.specs.rarity}
                     </span>
 
                     {/* Overlay de Ampliação */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 backdrop-blur-xs">
-                      <span className="inline-flex items-center gap-2 px-4 py-2 bg-black/80 border border-[#D4AF37] text-[#F7E7AD] text-xs uppercase tracking-widest">
-                        <Eye className="w-4 h-4 text-[#D4AF37]" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 backdrop-blur-xs">
+                      <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-black/90 border border-[#D4AF37] text-[#D4AF37] text-[11px] uppercase tracking-widest">
+                        <Eye className="w-3.5 h-3.5 text-[#D4AF37]" />
                         Ver Ficha Completa
                       </span>
                     </div>
 
                     {/* Tag do Nome */}
                     <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                      <span className="font-serif text-lg font-bold tracking-wider text-white drop-shadow-md">
+                      <span className="font-serif text-base sm:text-lg font-bold tracking-wider text-white drop-shadow-md">
                         {mat.name}
                       </span>
                       <span className="text-[10px] text-[#D4AF37] font-mono uppercase bg-black/60 px-2 py-0.5 border border-[#D4AF37]/30">
@@ -176,17 +173,17 @@ export const MaterialsSection: React.FC = () => {
                   </div>
 
                   {/* Conteúdo do Card */}
-                  <div className="p-6 space-y-4">
-                    <p className="text-xs uppercase tracking-wider text-[#D4AF37] font-medium border-b border-white/10 pb-2">
+                  <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+                    <p className="text-[11px] sm:text-xs uppercase tracking-wider text-[#D4AF37] font-medium border-b border-white/10 pb-2">
                       {mat.subtitle}
                     </p>
                     
-                    <p className="text-xs text-gray-300 font-light leading-relaxed line-clamp-3">
+                    <p className="text-xs text-gray-300 font-light leading-relaxed line-clamp-2 sm:line-clamp-3">
                       {mat.description}
                     </p>
 
                     {/* Especificações Rápidas */}
-                    <div className="grid grid-cols-2 gap-2 text-[11px] bg-black/50 p-2.5 border border-white/5 rounded-xs">
+                    <div className="grid grid-cols-2 gap-2 text-[11px] bg-black/50 p-2 sm:p-2.5 border border-white/5 rounded-xs">
                       <div>
                         <span className="text-gray-400 block text-[9px] uppercase">Origem</span>
                         <span className="text-white font-medium truncate block">{mat.specs.origin}</span>
@@ -198,7 +195,7 @@ export const MaterialsSection: React.FC = () => {
                     </div>
 
                     {/* Features */}
-                    <div className="space-y-1.5 pt-2">
+                    <div className="space-y-1.5 pt-1">
                       {mat.features.slice(0, 2).map((feat, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-[11px] text-gray-300">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
@@ -210,12 +207,12 @@ export const MaterialsSection: React.FC = () => {
                 </div>
 
                 {/* Botão de Cotação */}
-                <div className="p-6 pt-0 space-y-2">
+                <div className="p-4 sm:p-6 pt-0 space-y-2">
                   <a
                     href={getWhatsappMaterialUrl(mat.name)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3 px-4 bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] hover:from-[#FFF0BF] hover:to-[#C5A059] text-black font-bold text-xs uppercase tracking-[0.15em] flex items-center justify-between group/btn shadow-[0_0_15px_rgba(212,175,55,0.2)] transition-all duration-300"
+                    className="w-full py-2.5 sm:py-3 px-4 bg-[#D4AF37] hover:bg-[#C5A059] text-black font-semibold text-xs uppercase tracking-[0.15em] flex items-center justify-between group/btn shadow-sm transition-colors duration-300"
                   >
                     <span className="flex items-center gap-2">
                       <MessageCircle className="w-4 h-4 fill-black text-black" />
@@ -256,7 +253,7 @@ export const MaterialsSection: React.FC = () => {
                     onClick={() => goToPage(pageNum)}
                     className={`w-10 h-10 text-xs font-bold font-mono transition-all border ${
                       currentPage === pageNum
-                        ? 'bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] text-black border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.4)]'
+                        ? 'bg-[#D4AF37] text-black border-[#D4AF37]'
                         : 'bg-black/60 text-gray-400 border-white/10 hover:border-[#D4AF37]/50 hover:text-white'
                     }`}
                   >
@@ -351,7 +348,7 @@ export const MaterialsSection: React.FC = () => {
                   href={getWhatsappMaterialUrl(activeModalMaterial.name)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-4 bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] text-black font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                  className="w-full py-3.5 bg-[#D4AF37] hover:bg-[#C5A059] text-black font-semibold text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2.5 shadow-md transition-colors"
                 >
                   <MessageCircle className="w-5 h-5 fill-black" />
                   Solicitar Orçamento Desta Pedra no WhatsApp

@@ -15,27 +15,27 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-[#0A0A0C] text-white relative overflow-hidden border-t border-[#D4AF37]/30">
+    <section id="faq" className="py-14 sm:py-20 md:py-28 bg-[#0A0A0C] text-white relative overflow-hidden border-t border-[#D4AF37]/30">
       
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
             <HelpCircle className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#F7E7AD] font-semibold">
+            <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
               TIRE SUAS DÚVIDAS
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl font-light leading-tight tracking-tight text-white">
-            PERGUNTAS FREQUENTES <br />
-            <span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#C5A059]">
-              SOBRE NOSSAS PEDRAS & SERVIÇOS
+          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
+            Perguntas Frequentes <br />
+            <span className="font-normal italic text-[#D4AF37]">
+              Sobre Nossas Pedras & Serviços
             </span>
           </h2>
 
-          <p className="text-sm text-gray-300 font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-gray-300 font-light leading-relaxed">
             Esclareça os principais pontos sobre durabilidade, prazos de entrega, medição 3D e processo de impermeabilização.
           </p>
         </div>

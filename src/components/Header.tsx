@@ -68,20 +68,20 @@ export const Header: React.FC = () => {
             href={getWhatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2.5 px-6 py-3 bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] hover:from-[#FFF0BF] hover:to-[#C5A059] text-black font-semibold text-xs uppercase tracking-[0.18em] transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:shadow-[0_0_30px_rgba(212,175,55,0.7)]"
+            className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-[#D4AF37] hover:bg-[#C5A059] text-black font-semibold text-xs uppercase tracking-[0.18em] transition-colors shadow-sm"
           >
             <MessageCircle className="w-4 h-4 fill-black text-black" />
-            <span>Orçamento no WhatsApp</span>
+            <span>Orçamento VIP</span>
           </a>
         </div>
 
         {/* Mobile menu trigger button */}
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-2.5 lg:hidden">
           <a
             href={getWhatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2.5 bg-gradient-to-r from-[#F7E7AD] to-[#D4AF37] text-black rounded-none shadow-md"
+            className="p-2 bg-[#D4AF37] text-black rounded-xs shadow-sm"
             aria-label="Orçamento WhatsApp"
           >
             <MessageCircle className="w-4 h-4 fill-black text-black" />
@@ -91,21 +91,21 @@ export const Header: React.FC = () => {
             className="p-2 text-white hover:text-[#D4AF37] transition-colors focus:outline-none"
             aria-label="Abrir Menu"
           >
-            {mobileMenuOpen ? <X className="w-7 h-7 text-[#D4AF37]" /> : <Menu className="w-7 h-7 text-white" />}
+            {mobileMenuOpen ? <X className="w-6 h-6 text-[#D4AF37]" /> : <Menu className="w-6 h-6 text-white" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[65px] bg-[#0A0A0C]/98 backdrop-blur-2xl border-t border-[#D4AF37]/30 z-40 flex flex-col justify-between p-6 sm:p-8 animate-fade-in overflow-y-auto">
-          <div className="flex flex-col gap-5 pt-4">
+        <div className="lg:hidden fixed inset-0 top-[60px] bg-[#0A0A0C]/98 backdrop-blur-2xl border-t border-[#D4AF37]/30 z-40 flex flex-col justify-between p-6 sm:p-8 animate-fade-in overflow-y-auto">
+          <div className="flex flex-col gap-4 pt-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="font-serif text-xl sm:text-2xl tracking-wider text-white hover:text-[#D4AF37] transition-colors border-b border-white/10 pb-3 flex items-center justify-between"
+                className="font-serif text-lg sm:text-xl tracking-wider text-white hover:text-[#D4AF37] transition-colors border-b border-white/10 pb-2.5 flex items-center justify-between"
               >
                 <span>{link.name}</span>
                 <span className="text-xs text-[#D4AF37]">→</span>
@@ -113,14 +113,14 @@ export const Header: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex flex-col gap-4 mt-8 pt-6 border-t border-[#D4AF37]/30">
+          <div className="flex flex-col gap-3 mt-6 pt-5 border-t border-[#D4AF37]/30">
             <a
               href={getWhatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-4 bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] text-black font-bold text-center text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+              className="w-full py-3.5 bg-[#D4AF37] hover:bg-[#C5A059] text-black font-semibold text-center text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2.5 shadow-md transition-colors"
             >
-              <MessageCircle className="w-5 h-5 fill-black" />
+              <MessageCircle className="w-4 h-4 fill-black" />
               Solicitar Orçamento no WhatsApp
             </a>
             

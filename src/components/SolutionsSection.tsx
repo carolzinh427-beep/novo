@@ -13,9 +13,6 @@ export const SolutionsSection: React.FC = () => {
   return (
     <section id="solucoes" className="py-12 sm:py-16 bg-white text-black border-t border-b border-neutral-200 relative overflow-hidden">
       
-      {/* Decorative Gold Accent Bar */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
-
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-12">
         
         {/* Header Compacto da Seção */}
@@ -29,9 +26,9 @@ export const SolutionsSection: React.FC = () => {
             </div>
 
             <h2 className="font-serif text-xl sm:text-3xl font-light leading-tight tracking-tight text-neutral-900">
-              SOLUÇÕES DE LUXO PARA <br className="hidden sm:inline" />
-              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#B89334] via-[#D4AF37] to-[#8A6D23]">
-                CADA AMBIENTE DA SUA RESIDÊNCIA
+              Soluções de Luxo para <br className="hidden sm:inline" />
+              <span className="font-semibold text-[#9E7C1D]">
+                Cada Ambiente da Sua Residência
               </span>
             </h2>
           </div>

@@ -4,39 +4,36 @@ import { Sparkles } from 'lucide-react';
 
 export const ProcessSection: React.FC = () => {
   return (
-    <section id="processo" className="py-24 md:py-32 bg-[#0A0A0C] text-white relative overflow-hidden border-t border-b border-[#D4AF37]/30">
+    <section id="processo" className="py-14 sm:py-20 md:py-28 bg-[#0A0A0C] text-white relative overflow-hidden border-t border-b border-[#D4AF37]/30">
       
-      {/* Elemento Decorativo de fundo */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Cabeçalho da Seção */}
-        <div className="max-w-3xl mb-20 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
+        <div className="max-w-3xl mb-12 sm:mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#F7E7AD] font-semibold">
+            <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
               ENGENHARIA & PROCESSO DE ATENDIMENTO VIP
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl font-light leading-tight tracking-tight text-white">
-            DO CONCEITO À INSTALAÇÃO <br />
-            <span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#C5A059]">
-              EM 4 ETAPAS RIGOROSAS
+          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
+            Do Conceito à Instalação <br />
+            <span className="font-normal italic text-[#D4AF37]">
+              em 4 Etapas Rigorosas
             </span>
           </h2>
 
-          <p className="text-sm text-gray-300 font-light leading-relaxed max-w-xl">
+          <p className="text-xs sm:text-sm text-gray-300 font-light leading-relaxed max-w-xl">
             Cada projeto Stone Gran Lux segue um protocolo estrito para garantir que sua pedra chegue perfeita à obra e com encaixe milimétrico.
           </p>
         </div>
 
         {/* Linha do Tempo dos Processos */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8 relative">
           
           {/* Linha horizontal conectando as etapas no desktop */}
-          <div className="hidden md:block absolute top-[30px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-[#D4AF37]/80 via-white/20 to-[#D4AF37]/80 z-0" />
+          <div className="hidden md:block absolute top-[30px] left-[10%] right-[10%] h-[1px] bg-[#D4AF37]/40 z-0" />
 
           {siteConfig.processSteps.map((step, idx) => (
             <div key={idx} className="relative z-10 flex flex-col space-y-6 group bg-[#121215] p-6 border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1">

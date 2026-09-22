@@ -11,47 +11,47 @@ export const CtaBanner: React.FC = () => {
   };
 
   return (
-    <section className="relative py-28 md:py-36 bg-[#070708] text-white overflow-hidden border-t border-b border-[#D4AF37]/30">
-      {/* Background Image with Dark Vignette */}
+    <section className="relative py-14 sm:py-24 md:py-32 bg-[#070708] text-white overflow-hidden border-t border-b border-[#D4AF37]/30">
+      {/* Background Image with Solid Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={siteConfig.heroImage}
           alt="Projeto Stone Gran Lux"
-          className="w-full h-full object-cover object-center opacity-40 scale-105"
+          className="w-full h-full object-cover object-center opacity-30 scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070708] via-[#070708]/85 to-[#070708]" />
+        <div className="absolute inset-0 bg-[#070708]/85" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-8">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-8">
         
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-[#D4AF37]/40 bg-black/60 backdrop-blur-md rounded-full shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 border border-[#D4AF37]/40 bg-black/60 backdrop-blur-md rounded-full">
           <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-          <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#F7E7AD] font-semibold">
-            ORÇAMENTO EXPRESSO EM ATÉ 15 MINUTOS VIA WHATSAPP
+          <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
+            ORÇAMENTO EXPRESSO VIA WHATSAPP
           </span>
         </div>
 
-        <h2 className="font-serif text-3xl sm:text-6xl lg:text-7xl font-light tracking-tight text-white leading-[1.08]">
-          SUA OBRA DE ARTE EM PEDRA <br />
-          <span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#C5A059]">
-            COMEÇA COM UMA MENSAGEM.
+        <h2 className="font-serif text-2xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white leading-tight">
+          Sua Obra de Arte em Pedra <br />
+          <span className="font-normal italic text-[#D4AF37]">
+            Começa com uma Mensagem.
           </span>
         </h2>
 
-        <p className="text-sm sm:text-lg text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xs sm:text-base text-gray-300 font-light max-w-xl mx-auto leading-relaxed">
           Envie a planta do imóvel ou as medidas aproximadas e receba uma consultoria VIP em pedras exóticas, mármores e ilhas translúcidas.
         </p>
 
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href={getWhatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] hover:from-[#FFF0BF] hover:to-[#C5A059] text-black font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-[0_0_30px_rgba(212,175,55,0.5)] flex items-center justify-center gap-3 group"
+            className="w-full sm:w-auto px-8 py-4 bg-[#D4AF37] hover:bg-[#C5A059] text-black font-semibold text-xs uppercase tracking-[0.18em] transition-colors shadow-md flex items-center justify-center gap-2.5 group"
           >
-            <MessageCircle className="w-5 h-5 fill-black text-black" />
-            <span>Falar com um Consultor de Orçamentos no WhatsApp</span>
-            <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
+            <MessageCircle className="w-4 h-4 fill-black text-black" />
+            <span>Falar com um Consultor no WhatsApp</span>
+            <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-0.5 transition-transform" />
           </a>
         </div>
 

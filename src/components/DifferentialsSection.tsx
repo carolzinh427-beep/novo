@@ -13,17 +13,14 @@ export const DifferentialsSection: React.FC = () => {
   };
 
   return (
-    <section id="diferenciais" className="py-24 md:py-32 bg-white text-black border-t border-b border-gray-200 relative overflow-hidden">
+    <section id="diferenciais" className="py-14 sm:py-20 md:py-28 bg-white text-black border-t border-b border-gray-200 relative overflow-hidden">
       
-      {/* Decorative Subtle Gold Geometric Line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           
           {/* Lado Esquerdo: Título Editorial Fixo com Fundo Branco */}
-          <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-32">
+          <div className="lg:col-span-5 space-y-5 lg:sticky lg:top-32">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FAF6E9] border border-[#D4AF37]/30 rounded-full">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37]" />
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#9E7C1D] font-bold">
@@ -31,10 +28,10 @@ export const DifferentialsSection: React.FC = () => {
               </span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-5xl font-light leading-[1.12] tracking-tight text-neutral-900">
-              PRECISÃO EM CORTE CNC. <br />
-              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#B89334] via-[#D4AF37] to-[#8A6D23]">
-                ACABAMENTO DE ALTA JOALHERIA.
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
+              Precisão em Corte CNC. <br />
+              <span className="font-semibold text-[#9E7C1D]">
+                Acabamento de Alta Joalheria.
               </span>
             </h2>
 

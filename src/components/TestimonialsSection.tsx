@@ -28,12 +28,12 @@ export const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section id="depoimentos" className="py-24 md:py-32 bg-white text-black border-t border-b border-neutral-200 relative overflow-hidden">
+    <section id="depoimentos" className="py-14 sm:py-20 md:py-28 bg-white text-black border-t border-b border-neutral-200 relative overflow-hidden">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
         {/* Header com Fundo Branco */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FAF6E9] border border-[#D4AF37]/30 rounded-full">
             <Star className="w-3.5 h-3.5 fill-[#D4AF37] text-[#D4AF37]" />
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#9E7C1D] font-bold">
@@ -41,10 +41,10 @@ export const TestimonialsSection: React.FC = () => {
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl font-light leading-tight tracking-tight text-neutral-900">
-            A SATISFAÇÃO DOS PRINCIPAIS <br />
-            <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#B89334] via-[#D4AF37] to-[#8A6D23]">
-              ARQUITETOS E CLIENTES V.I.P.
+          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
+            A Satisfação dos Principais <br />
+            <span className="font-semibold text-[#9E7C1D]">
+              Arquitetos e Clientes V.I.P.
             </span>
           </h2>
 

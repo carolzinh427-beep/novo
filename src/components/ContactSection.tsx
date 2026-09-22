@@ -34,26 +34,23 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contato" className="py-24 md:py-32 bg-[#0A0A0C] text-white border-t border-b border-[#D4AF37]/30 relative overflow-hidden">
+    <section id="contato" className="py-14 sm:py-20 md:py-28 bg-[#0A0A0C] text-white border-t border-b border-[#D4AF37]/30 relative overflow-hidden">
       
-      {/* Decorative Top Accent Bar */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
         {/* Cabeçalho */}
-        <div className="max-w-3xl mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-4 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
+        <div className="max-w-3xl mb-10 sm:mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#F7E7AD] font-semibold">
+            <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
               SOLICITAÇÃO DE ORÇAMENTO & CONSULTORIA VIP
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl font-light leading-tight tracking-tight text-white">
-            FALE COM NOSSOS ENGENHEIROS & <br />
-            <span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#C5A059]">
-              RECEBA SEU PROJETO EM ATÉ 24H
+          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
+            Fale com Nossos Engenheiros & <br />
+            <span className="font-normal italic text-[#D4AF37]">
+              Receba Seu Projeto em Até 24h
             </span>
           </h2>
         </div>
@@ -71,7 +68,7 @@ export const ContactSection: React.FC = () => {
                   href={`https://wa.me/${siteConfig.whatsappNumber}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-4 bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] text-black transition-transform hover:scale-[1.02] shadow-[0_0_20px_rgba(212,175,55,0.3)] font-bold rounded-xs"
+                  className="flex items-start gap-4 p-4 bg-[#D4AF37] hover:bg-[#C5A059] text-black transition-colors font-bold rounded-xs shadow-sm"
                 >
                   <MessageCircle className="w-6 h-6 fill-black text-black shrink-0 mt-0.5" />
                   <div>
@@ -217,7 +214,7 @@ export const ContactSection: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full py-4 bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] hover:from-[#FFF0BF] hover:to-[#C5A059] text-black font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                className="w-full py-3.5 sm:py-4 bg-[#D4AF37] hover:bg-[#C5A059] text-black font-semibold text-xs uppercase tracking-[0.18em] transition-colors flex items-center justify-center gap-2.5 shadow-md"
               >
                 <Send className="w-4 h-4 text-black" />
                 <span>Enviar Solicitação para o WhatsApp</span>

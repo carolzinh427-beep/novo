@@ -4,34 +4,34 @@ import { siteConfig } from '../config/site';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="sobre" className="py-24 md:py-32 bg-white text-black border-t border-b border-neutral-200">
+    <section id="sobre" className="py-14 sm:py-20 md:py-28 bg-white text-black border-t border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           
           {/* Lado Esquerdo: Fotografia de Mármore & Oficina */}
           <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/3] img-zoom-container shadow-2xl border border-neutral-200 overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/3] img-zoom-container shadow-xl border border-neutral-200 overflow-hidden rounded-sm">
               <img
                 src="/images/hero_black_gold_marble.jpg"
                 alt={`Marmoraria Stone Gran Lux`}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-black/30" />
             </div>
 
             {/* Badge de Tradição Flutuante */}
-            <div className="absolute -bottom-6 -right-2 sm:right-6 bg-neutral-900 text-white p-6 border-2 border-[#D4AF37] shadow-2xl max-w-xs space-y-1 rounded-sm">
-              <p className="font-serif text-3xl font-bold text-[#D4AF37]">{siteConfig.yearsExperience}+ Anos</p>
-              <p className="text-[11px] uppercase tracking-widest text-gray-300 font-medium">
+            <div className="absolute -bottom-4 -right-2 sm:right-6 bg-neutral-900 text-white p-4 sm:p-6 border-2 border-[#D4AF37] shadow-xl max-w-xs space-y-1 rounded-sm">
+              <p className="font-serif text-2xl sm:text-3xl font-bold text-[#D4AF37]">{siteConfig.yearsExperience}+ Anos</p>
+              <p className="text-[10px] sm:text-[11px] uppercase tracking-widest text-gray-300 font-medium">
                 De Tradição em {siteConfig.city}
               </p>
             </div>
           </div>
 
           {/* Lado Direito: Texto Institucional */}
-          <div className="lg:col-span-6 space-y-6 pt-6 lg:pt-0">
+          <div className="lg:col-span-6 space-y-5 pt-4 lg:pt-0">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FAF6E9] border border-[#D4AF37]/30 rounded-full">
               <Sparkles className="w-3.5 h-3.5 text-[#B89334]" />
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#9E7C1D] font-bold">
@@ -39,10 +39,10 @@ export const AboutSection: React.FC = () => {
               </span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-5xl font-light leading-tight tracking-tight text-neutral-900">
-              TRADIÇÃO EM ROCHAS NOBRES <br />
-              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#B89334] via-[#D4AF37] to-[#8A6D23]">
-                E TECNOLOGIA DE USINAGEM LASER
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
+              Tradição em Rochas Nobres <br />
+              <span className="font-semibold text-[#9E7C1D]">
+                e Tecnologia de Usinagem Laser
               </span>
             </h2>
 

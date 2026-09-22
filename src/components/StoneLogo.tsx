@@ -25,14 +25,14 @@ export const StoneLogo: React.FC<StoneLogoProps> = ({
     sm: 'text-sm tracking-[0.25em]',
     md: 'text-lg sm:text-xl tracking-[0.3em]',
     lg: 'text-2xl sm:text-3xl tracking-[0.35em]',
-    hero: 'text-3xl sm:text-5xl lg:text-6xl tracking-[0.4em]',
+    hero: 'text-2xl sm:text-4xl lg:text-5xl tracking-[0.35em]',
   };
 
   const granLuxTextSizes = {
     sm: 'text-[10px] tracking-[0.2em]',
     md: 'text-xs sm:text-sm tracking-[0.25em]',
     lg: 'text-base sm:text-lg tracking-[0.3em]',
-    hero: 'text-xl sm:text-3xl lg:text-4xl tracking-[0.35em]',
+    hero: 'text-base sm:text-2xl lg:text-3xl tracking-[0.3em]',
   };
 
   return (
@@ -112,7 +112,7 @@ export const StoneLogo: React.FC<StoneLogoProps> = ({
         
         {/* GRAN LUX */}
         <span
-          className={`font-serif font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#F7E7AD] via-[#D4AF37] to-[#AA822A] uppercase ${granLuxTextSizes[size]} mt-1 leading-none`}
+          className={`font-serif font-semibold text-[#D4AF37] uppercase ${granLuxTextSizes[size]} mt-1 leading-none`}
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
         >
           GRAN LUX
