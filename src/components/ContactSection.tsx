@@ -34,14 +34,14 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contato" className="py-14 sm:py-20 md:py-28 bg-white text-neutral-900 border-t border-b border-neutral-200 relative overflow-hidden">
+    <section id="contato" className="py-8 sm:py-20 md:py-28 bg-white text-neutral-900 border-t border-b border-neutral-200 relative overflow-hidden">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
-        {/* Cabeçalho */}
-        <div className="max-w-3xl mb-10 sm:mb-16 space-y-3">
-          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
-            Inicie Seu Atendimento com <br />
+        {/* Cabeçalho Compacto no Mobile */}
+        <div className="max-w-3xl mb-4 sm:mb-16 space-y-1 sm:space-y-3 text-center lg:text-left">
+          <h2 className="font-serif text-xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-neutral-900">
+            Inicie Seu Atendimento com <br className="hidden sm:inline" />
             <span className="text-[#9E7C1D] font-normal">
               Especialistas em Pedras Nobres
             </span>
@@ -126,49 +126,49 @@ export const ContactSection: React.FC = () => {
 
           </div>
 
-          {/* Lado Direito: Formulário Inteligente Compacto no Celular */}
-          <div className="lg:col-span-7 bg-neutral-50 border border-[#D4AF37] sm:border-2 p-4 sm:p-8 md:p-10 shadow-lg text-neutral-900 space-y-4 sm:space-y-6 rounded-sm w-full max-w-2xl mx-auto">
-            <div>
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-neutral-900">Receba uma Cotação Detalhada</h3>
-              <p className="text-[11px] sm:text-xs text-neutral-600 font-light mt-0.5">
-                Preencha os dados e receba o orçamento direto no seu WhatsApp em instantes
+          {/* Lado Direito: Formulário Inteligente em Quadrado Compacto no Celular */}
+          <div className="lg:col-span-7 bg-neutral-50 border border-[#D4AF37] sm:border-2 p-3.5 sm:p-8 md:p-10 shadow-md sm:shadow-lg text-neutral-900 space-y-2.5 sm:space-y-6 rounded-sm w-full max-w-sm sm:max-w-2xl mx-auto">
+            <div className="text-center sm:text-left">
+              <h3 className="font-serif text-base sm:text-2xl font-bold text-neutral-900">Receba uma Cotação Detalhada</h3>
+              <p className="text-[10px] sm:text-xs text-neutral-600 font-light mt-0.5">
+                Preencha os dados e receba o orçamento no WhatsApp em instantes
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
-                <div className="space-y-1 sm:space-y-1.5">
-                  <label className="text-[11px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold">Seu Nome Completo</label>
+            <form onSubmit={handleSubmit} className="space-y-2.5 sm:space-y-5">
+              <div className="grid grid-cols-2 gap-2 sm:gap-6">
+                <div className="space-y-0.5 sm:space-y-1.5">
+                  <label className="text-[9px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold block">Nome Completo</label>
                   <input
                     type="text"
                     required
-                    placeholder="Ex: Dra. Patrícia Lima"
+                    placeholder="Dra. Patrícia Lima"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-xs sm:text-sm font-light text-neutral-900 rounded-xs"
+                    className="w-full px-2.5 py-1.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-[11px] sm:text-sm font-light text-neutral-900 rounded-xs"
                   />
                 </div>
 
-                <div className="space-y-1 sm:space-y-1.5">
-                  <label className="text-[11px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold">Seu WhatsApp</label>
+                <div className="space-y-0.5 sm:space-y-1.5">
+                  <label className="text-[9px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold block">WhatsApp</label>
                   <input
                     type="tel"
                     required
-                    placeholder="Ex: (61) 98888-7777"
+                    placeholder="(61) 98237-9729"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-xs sm:text-sm font-light text-neutral-900 rounded-xs"
+                    className="w-full px-2.5 py-1.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-[11px] sm:text-sm font-light text-neutral-900 rounded-xs"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
-                <div className="space-y-1 sm:space-y-1.5">
-                  <label className="text-[11px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold">Pedra de Interesse</label>
+              <div className="grid grid-cols-2 gap-2 sm:gap-6">
+                <div className="space-y-0.5 sm:space-y-1.5">
+                  <label className="text-[9px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold block">Pedra Nobre</label>
                   <select
                     value={formData.material}
                     onChange={(e) => setFormData({ ...formData, material: e.target.value })}
-                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-xs sm:text-sm font-light text-neutral-900 rounded-xs"
+                    className="w-full px-2 py-1.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-[10.5px] sm:text-sm font-light text-neutral-900 rounded-xs truncate"
                   >
                     {siteConfig.materials.map((m) => (
                       <option key={m.id} value={m.name}>{m.name}</option>
@@ -177,12 +177,12 @@ export const ContactSection: React.FC = () => {
                   </select>
                 </div>
 
-                <div className="space-y-1 sm:space-y-1.5">
-                  <label className="text-[11px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold">Aplicação no Projeto</label>
+                <div className="space-y-0.5 sm:space-y-1.5">
+                  <label className="text-[9px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold block">Aplicação</label>
                   <select
                     value={formData.solution}
                     onChange={(e) => setFormData({ ...formData, solution: e.target.value })}
-                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-xs sm:text-sm font-light text-neutral-900 rounded-xs"
+                    className="w-full px-2 py-1.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-[10.5px] sm:text-sm font-light text-neutral-900 rounded-xs truncate"
                   >
                     {siteConfig.solutions.map((s) => (
                       <option key={s.id} value={s.title}>{s.title}</option>
@@ -191,23 +191,23 @@ export const ContactSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="space-y-1 sm:space-y-1.5">
-                <label className="text-[11px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold">Mensagem / Medidas do Projeto</label>
+              <div className="space-y-0.5 sm:space-y-1.5">
+                <label className="text-[9px] sm:text-xs uppercase tracking-wider text-neutral-700 font-semibold block">Mensagem / Medidas</label>
                 <textarea
-                  rows={2}
-                  placeholder="Ex: Preciso de uma ilha de cozinha de 3m x 1.20m em Ilha Ônix Rosa com borda em 45º"
+                  rows={1}
+                  placeholder="Ex: Ilha gourmet de 3m x 1.20m em Ônix com 45º"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-xs sm:text-sm font-light text-neutral-900 rounded-xs"
+                  className="w-full px-2.5 py-1.5 sm:px-4 sm:py-3 bg-white border border-neutral-300 focus:border-[#D4AF37] focus:outline-none text-[11px] sm:text-sm font-light text-neutral-900 rounded-xs resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3 sm:py-3.5 bg-[#D4AF37] hover:bg-[#C5A059] text-black font-semibold text-xs uppercase tracking-[0.16em] transition-colors flex items-center justify-center gap-2 shadow-md rounded-xs"
+                className="w-full py-2.5 sm:py-3.5 bg-[#D4AF37] hover:bg-[#C5A059] text-black font-semibold text-[11px] sm:text-xs uppercase tracking-[0.14em] transition-colors flex items-center justify-center gap-2 shadow-sm rounded-xs cursor-pointer"
               >
                 <Send className="w-3.5 h-3.5 text-black" />
-                <span>Enviar Solicitação para o WhatsApp</span>
+                <span>Enviar para o WhatsApp</span>
               </button>
             </form>
           </div>
