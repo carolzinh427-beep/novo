@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
 
         {/* Subtítulo Confortável e Arejado */}
         <p className="text-xs sm:text-base text-gray-300 font-light leading-relaxed max-w-xl mb-6 sm:mb-8 px-2 sm:px-0">
-          Transformamos superfícies nobres importadas e quartzitos raros em peças sob medida com corte CNC a laser e precisão milimétrica.
+          Transformamos superfícies nobres importadas e quartzitos raros em peças sob medida com corte CNC a laser e precisão milimétrica
         </p>
 
         {/* Botões de Ação Elegantes e Sem Gradiente */}

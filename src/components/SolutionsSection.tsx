@@ -5,7 +5,7 @@ import { siteConfig } from '../config/site';
 export const SolutionsSection: React.FC = () => {
   const getWhatsappSolutionUrl = (title: string) => {
     const text = encodeURIComponent(
-      `Olá Stone Gran Lux! Gostaria de um orçamento especializado para *${title}* para o meu projeto.`
+      `Olá Stone Gran Lux! Gostaria de um orçamento especializado para *${title}* para o meu projeto`
     );
     return `https://wa.me/${siteConfig.whatsappNumber}?text=${text}`;
   };
@@ -34,7 +34,7 @@ export const SolutionsSection: React.FC = () => {
           </div>
 
           <p className="text-xs sm:text-sm text-neutral-600 max-w-md font-light leading-relaxed">
-            De bancadas gourmets com cubas ocultas a painéis verticais retroiluminados em pedra natural.
+            De bancadas gourmets com cubas ocultas a painéis verticais retroiluminados em pedra natural
           </p>
         </div>
 

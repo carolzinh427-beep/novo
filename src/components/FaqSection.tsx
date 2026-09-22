@@ -10,7 +10,7 @@ export const FaqSection: React.FC = () => {
   };
 
   const getWhatsappUrl = () => {
-    const text = encodeURIComponent("Olá Stone Gran Lux! Tenho uma dúvida específica sobre um projeto em pedra natural.");
+    const text = encodeURIComponent("Olá Stone Gran Lux! Tenho uma dúvida específica sobre um projeto em pedra natural");
     return `https://wa.me/${siteConfig.whatsappNumber}?text=${text}`;
   };
 
@@ -36,7 +36,7 @@ export const FaqSection: React.FC = () => {
           </h2>
 
           <p className="text-xs sm:text-sm text-gray-300 font-light leading-relaxed">
-            Esclareça os principais pontos sobre durabilidade, prazos de entrega, medição 3D e processo de impermeabilização.
+            Esclareça os principais pontos sobre durabilidade, prazos de entrega, medição 3D e processo de impermeabilização
           </p>
         </div>
 
@@ -49,11 +49,11 @@ export const FaqSection: React.FC = () => {
             >
               <button
                 onClick={() => toggleFaq(idx)}
-                className="w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg sm:text-xl font-bold text-white hover:text-[#F7E7AD] transition-colors"
+                className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-xl font-bold text-white hover:text-[#D4AF37] transition-colors"
               >
                 <span className="flex items-center gap-3">
-                  <span className="text-[#D4AF37] font-mono text-sm">0{idx + 1}.</span>
-                  {faq.question}
+                  <span className="text-[#D4AF37] font-mono text-xs sm:text-sm">0{idx + 1}</span>
+                  {faq.question.replace(/\?$/, '')}
                 </span>
                 <ChevronDown
                   className={`w-5 h-5 text-[#D4AF37] shrink-0 transition-transform duration-300 ${

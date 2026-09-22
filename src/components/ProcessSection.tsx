@@ -25,7 +25,7 @@ export const ProcessSection: React.FC = () => {
           </h2>
 
           <p className="text-xs sm:text-sm text-gray-300 font-light leading-relaxed max-w-xl">
-            Cada projeto Stone Gran Lux segue um protocolo estrito para garantir que sua pedra chegue perfeita à obra e com encaixe milimétrico.
+            Cada projeto Stone Gran Lux segue um protocolo estrito para garantir que sua pedra chegue perfeita à obra e com encaixe milimétrico
           </p>
         </div>
 
@@ -36,27 +36,27 @@ export const ProcessSection: React.FC = () => {
           <div className="hidden md:block absolute top-[30px] left-[10%] right-[10%] h-[1px] bg-[#D4AF37]/40 z-0" />
 
           {siteConfig.processSteps.map((step, idx) => (
-            <div key={idx} className="relative z-10 flex flex-col space-y-6 group bg-[#121215] p-6 border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1">
+            <div key={idx} className="relative z-10 flex flex-col space-y-4 sm:space-y-6 group bg-[#121215] p-5 sm:p-6 border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-300 rounded-xs shadow-lg hover:-translate-y-1">
               
               {/* Círculo com Número */}
-              <div className="w-16 h-16 bg-black border-2 border-[#D4AF37] group-hover:bg-[#D4AF37] transition-colors duration-500 flex items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.3)]">
-                <span className="font-serif text-2xl font-bold text-[#D4AF37] group-hover:text-black transition-colors">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-black border-2 border-[#D4AF37] group-hover:bg-[#D4AF37] transition-colors duration-300 flex items-center justify-center shadow-sm">
+                <span className="font-serif text-xl sm:text-2xl font-bold text-[#D4AF37] group-hover:text-black transition-colors">
                   {step.number}
                 </span>
               </div>
 
               {/* Informações da Etapa */}
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-[#D4AF37]">
                   {step.subtitle}
                 </span>
                 
-                <h3 className="font-serif text-xl font-bold tracking-wide text-white group-hover:text-[#F7E7AD] transition-colors">
+                <h3 className="font-serif text-lg sm:text-xl font-bold tracking-wide text-white group-hover:text-[#D4AF37] transition-colors">
                   {step.title}
                 </h3>
                 
                 <p className="text-xs text-gray-300 font-light leading-relaxed">
-                  {step.description}
+                  {step.description.replace(/\.$/, '')}
                 </p>
               </div>
 

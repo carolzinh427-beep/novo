@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
             </a>
 
             <p className="text-xs text-gray-400 font-light leading-relaxed max-w-sm">
-              Marmoraria de Luxo especializada em Ilha Ônix Rosa, Ônix Branco Translúcido, Granitos Exóticos, Quartzitos e Mármores Raros. Precisão CNC a laser e 10 Anos de Garantia Técnica.
+              Marmoraria de Luxo especializada em Ilha Ônix Rosa Ônix Branco Translúcido Granitos Exóticos Quartzitos e Mármores Raros Precisão CNC a laser e 10 Anos de Garantia Técnica
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -97,7 +97,7 @@ export const Footer: React.FC = () => {
 
         {/* Rodapé Final */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 font-light gap-4">
-          <p>© 2026 {siteConfig.name}. Todos os direitos reservados. Marmoraria de Luxo.</p>
+          <p>© 2026 {siteConfig.name} Todos os direitos reservados Marmoraria de Luxo</p>
           
           <button
             onClick={scrollToTop}

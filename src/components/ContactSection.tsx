@@ -43,14 +43,14 @@ export const ContactSection: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-black/80 border border-[#D4AF37]/40 rounded-full">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
-              SOLICITAÇÃO DE ORÇAMENTO & CONSULTORIA VIP
+              CONSULTORIA EXCLUSIVA
             </span>
           </div>
 
           <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-white">
-            Fale com Nossos Engenheiros & <br />
+            Inicie Seu Atendimento com <br />
             <span className="font-normal italic text-[#D4AF37]">
-              Receba Seu Projeto em Até 24h
+              Especialistas em Pedras Nobres
             </span>
           </h2>
         </div>
@@ -141,7 +141,7 @@ export const ContactSection: React.FC = () => {
               </span>
               <h3 className="font-serif text-2xl font-bold text-white">Receba uma Cotação Detalhada</h3>
               <p className="text-xs text-gray-400 font-light mt-1">
-                Preencha os dados e receba o orçamento direto no seu WhatsApp em instantes.
+                Preencha os dados e receba o orçamento direto no seu WhatsApp em instantes
               </p>
             </div>
 
@@ -205,7 +205,7 @@ export const ContactSection: React.FC = () => {
                 <label className="text-xs uppercase tracking-wider text-[#D4AF37] font-semibold">Mensagem / Medidas do Projeto</label>
                 <textarea
                   rows={4}
-                  placeholder="Ex: Preciso de uma ilha de cozinha de 3.00m x 1.20m em Ilha Ônix Rosa com borda em 45º..."
+                  placeholder="Ex: Preciso de uma ilha de cozinha de 3m x 1.20m em Ilha Ônix Rosa com borda em 45º"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 bg-black border border-white/20 focus:border-[#D4AF37] focus:outline-none text-sm font-light text-white"

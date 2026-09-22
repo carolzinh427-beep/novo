@@ -58,7 +58,7 @@ export const MaterialsSection: React.FC = () => {
 
   const getWhatsappMaterialUrl = (materialName: string) => {
     const text = encodeURIComponent(
-      `Olá Stone Gran Lux! Gostaria de consultar um orçamento exclusivo para a pedra *${materialName}* para o meu projeto.`
+      `Olá Stone Gran Lux Gostaria de consultar um orçamento exclusivo para a pedra *${materialName}* para o meu projeto`
     );
     return `https://wa.me/${siteConfig.whatsappNumber}?text=${text}`;
   };
@@ -92,7 +92,7 @@ export const MaterialsSection: React.FC = () => {
             <Search className="w-4 h-4 text-[#D4AF37] absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Buscar por nome..."
+              placeholder="Buscar por nome"
               value={searchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
               className="w-full pl-9 pr-4 py-2 bg-black border border-white/20 focus:border-[#D4AF37] text-xs text-white placeholder-gray-500 focus:outline-none transition-colors"
@@ -113,7 +113,7 @@ export const MaterialsSection: React.FC = () => {
         {/* Grid de Pedras */}
         {paginatedMaterials.length === 0 ? (
           <div className="text-center py-16 bg-[#121215] border border-white/10 p-8 space-y-3">
-            <p className="font-serif text-xl text-gray-300">Nenhuma pedra encontrada para a busca "{searchQuery}"</p>
+            <p className="font-serif text-xl text-gray-300">Nenhuma pedra encontrada para a busca {searchQuery}</p>
             <button
               onClick={() => { handleCategoryChange('all'); setSearchQuery(''); }}
               className="px-6 py-2 bg-[#D4AF37] text-black font-bold text-xs uppercase tracking-widest"
@@ -179,7 +179,7 @@ export const MaterialsSection: React.FC = () => {
                     </p>
                     
                     <p className="text-xs text-gray-300 font-light leading-relaxed line-clamp-2 sm:line-clamp-3">
-                      {mat.description}
+                      {mat.description.replace(/\.$/, '')}
                     </p>
 
                     {/* Especificações Rápidas */}
@@ -320,7 +320,7 @@ export const MaterialsSection: React.FC = () => {
                 </p>
 
                 <p className="text-xs sm:text-sm text-gray-300 font-light leading-relaxed mb-6">
-                  {activeModalMaterial.description}
+                  {activeModalMaterial.description.replace(/\.$/, '')}
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 bg-black/70 p-4 border border-[#D4AF37]/30 text-xs mb-6">

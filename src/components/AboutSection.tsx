@@ -48,10 +48,10 @@ export const AboutSection: React.FC = () => {
 
             <div className="space-y-4 text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
               <p>
-                A <strong className="text-neutral-900 font-semibold">Stone Gran Lux</strong> é referência no mercado de pedras ornamentais e superfícies exóticas de altíssimo padrão. Atendemos aos mais conceituados escritórios de arquitetura e clientes finais exigentes em São Paulo e em todo o Brasil.
+                A <strong className="text-neutral-900 font-semibold">Stone Gran Lux</strong> é referência no mercado de pedras ornamentais e superfícies exóticas de altíssimo padrão Atendemos aos mais conceituados escritórios de arquitetura e clientes finais exigentes em São Paulo e em todo o Brasil
               </p>
               <p>
-                Nosso pátio conta com escaneamento 3D de prumos e corte CNC a laser robotizado, o que possibilita junções de 45º absolutamente perfeitas, cubas esculpidas com ralo oculto e a montagem de painéis de Ilha Ônix Rosa e Ônix Branco com retroiluminação LED cênica.
+                Nosso pátio conta com escaneamento 3D de prumos e corte CNC a laser robotizado, o que possibilita junções de 45º absolutamente perfeitas, cubas esculpidas com ralo oculto e a montagem de painéis de Ilha Ônix Rosa e Ônix Branco com retroiluminação LED cênica
               </p>
             </div>
 

@@ -9,7 +9,6 @@ import { AboutSection } from './components/AboutSection';
 import { FaqSection } from './components/FaqSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { ContactSection } from './components/ContactSection';
-import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
 import { FloatingWhatsapp } from './components/FloatingWhatsapp';
 
@@ -46,10 +45,7 @@ export const App: React.FC = () => {
       {/* 8. Formulário de Contato & Mapa Showroom: FUNDO PRETO */}
       <ContactSection />
 
-      {/* 9. Call-to-Action Banner Final: FUNDO PRETO */}
-      <CtaBanner />
-
-      {/* 10. Footer Minimalista de Luxo: FUNDO PRETO */}
+      {/* 9. Footer Minimalista de Luxo: FUNDO PRETO */}
       <Footer />
 
       {/* Botão Flutuante do WhatsApp */}
