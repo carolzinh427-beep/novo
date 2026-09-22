@@ -4,6 +4,8 @@
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-editorial: "Cormorant Garamond", Georgia, serif;
   --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-italiana: "Italiana", Georgia, serif;
+  --font-marcellus: "Marcellus", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   
   --color-warm-cream: #FBF9F5;
@@ -14,6 +16,14 @@
   --color-bronze-accent: #C5A880;
   --color-bronze-dark: #A88B63;
   --color-muted-slate: #6B6862;
+}
+
+.font-italiana {
+  font-family: var(--font-italiana);
+}
+
+.font-marcellus {
+  font-family: var(--font-marcellus);
 }
 
 /* Custom Base Styles */

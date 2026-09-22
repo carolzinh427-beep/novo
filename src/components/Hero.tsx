@@ -1,6 +1,7 @@
 import React from 'react';
 import { MessageCircle, ChevronRight } from 'lucide-react';
 import { siteConfig } from '../config/site';
+import { FoldText } from './FoldText';
 
 export const Hero: React.FC = () => {
   const getWhatsappUrl = () => {
@@ -32,13 +33,37 @@ export const Hero: React.FC = () => {
           </h1>
         </div>
 
-        {/* Frase menor embaixo dele, sem chamar mais atenção que o nome, na mesma fonte e em exatamente 2 linhas */}
-        <h2 className="font-serif text-sm sm:text-lg md:text-xl font-light text-gray-300 leading-snug tracking-wider mb-8 sm:mb-10 max-w-lg">
-          Elegância Esculpida em <br />
-          <span className="text-[#D4AF37] font-normal">
-            Pedras Nobres & Exóticas
-          </span>
-        </h2>
+        {/* H2 Semântico para SEO */}
+        <h2 className="sr-only">Elegância Esculpida em Pedras Nobres & Exóticas</h2>
+
+        {/* Frase menor embaixo dele, sem chamar mais atenção que o nome, com o componente FoldText e tipografia nobre italiana sem cara de IA */}
+        <div className="mb-8 sm:mb-10 max-w-lg flex flex-col items-center justify-center text-center">
+          <FoldText
+            text="Elegância Esculpida em"
+            splitBy="word"
+            hinge="top"
+            trigger="mount"
+            duration={0.7}
+            stagger={0.05}
+            fontSize="clamp(0.95rem, 2.2vw, 1.25rem)"
+            fontWeight={400}
+            color="#EAE6DD"
+            style={{ fontFamily: "'Italiana', Georgia, serif", letterSpacing: '0.06em' }}
+          />
+          <FoldText
+            text="Pedras Nobres & Exóticas"
+            splitBy="word"
+            hinge="top"
+            trigger="mount"
+            duration={0.7}
+            stagger={0.05}
+            fontSize="clamp(1.05rem, 2.5vw, 1.4rem)"
+            fontWeight={400}
+            color="#D4AF37"
+            style={{ fontFamily: "'Italiana', Georgia, serif", letterSpacing: '0.06em' }}
+            className="mt-1"
+          />
+        </div>
 
         {/* Botões de Ação Elegantes e Sem Gradiente */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-12 px-4 sm:px-0">

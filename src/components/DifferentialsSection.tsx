@@ -1,6 +1,7 @@
 import React from 'react';
 import { siteConfig } from '../config/site';
 import { CheckCircle2 } from 'lucide-react';
+import { PixelTransition } from './PixelTransition';
 
 export const DifferentialsSection: React.FC = () => {
 
@@ -36,27 +37,59 @@ export const DifferentialsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Lado Direito: Grid de Quadrados Menores e Compactos Sem Desenhos/Emojis */}
+          {/* Lado Direito: Grid de Quadrados Menores com PixelTransition Automático */}
           <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
             {siteConfig.differentials.map((diff, idx) => (
-              <div
+              <PixelTransition
                 key={idx}
-                className="p-3.5 sm:p-4 bg-neutral-50 hover:bg-white border border-neutral-200 hover:border-[#D4AF37] transition-all duration-300 shadow-xs hover:shadow-md rounded-xs group flex flex-col justify-between"
-              >
-                <div>
-                  <span className="text-[10px] font-serif font-bold text-[#B89334] tracking-widest uppercase block mb-1">
-                    0{idx + 1}
-                  </span>
+                gridSize={8}
+                pixelColor="#D4AF37"
+                animationStepDuration={0.35}
+                autoPlay={true}
+                autoInterval={4200}
+                autoDelay={idx * 600}
+                aspectRatio="90%"
+                className="shadow-xs hover:shadow-md transition-shadow rounded-xs cursor-pointer group"
+                firstContent={
+                  <div className="w-full h-full p-3 sm:p-4 bg-neutral-50 hover:bg-white flex flex-col justify-between transition-colors">
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-[10px] sm:text-xs font-serif font-bold text-[#B89334] tracking-widest uppercase">
+                          0{idx + 1}
+                        </span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/60" />
+                      </div>
 
-                  <h3 className="font-serif text-sm sm:text-base font-bold text-neutral-900 group-hover:text-[#B89334] transition-colors mb-1.5 leading-snug">
-                    {diff.title}
-                  </h3>
+                      <h3 className="font-serif text-xs sm:text-sm md:text-base font-bold text-neutral-900 group-hover:text-[#B89334] transition-colors leading-snug">
+                        {diff.title}
+                      </h3>
+                    </div>
 
-                  <p className="text-[11px] sm:text-xs text-neutral-600 font-light leading-relaxed">
-                    {diff.description.replace(/\.$/, '')}
-                  </p>
-                </div>
-              </div>
+                    <div className="pt-2 border-t border-neutral-200/70 flex items-center justify-between text-[8px] sm:text-[9px] text-neutral-500 uppercase tracking-wider">
+                      <span>Corte Laser CNC</span>
+                      <span className="text-[#B89334] font-semibold">Detalhes →</span>
+                    </div>
+                  </div>
+                }
+                secondContent={
+                  <div className="w-full h-full p-3 sm:p-4 bg-white flex flex-col justify-between border-t-2 border-[#D4AF37]">
+                    <div>
+                      <span className="text-[9px] font-bold text-[#B89334] uppercase tracking-widest block mb-1">
+                        0{idx + 1} • Padrão Stone
+                      </span>
+
+                      <p className="text-[10px] sm:text-[11px] md:text-xs text-neutral-700 font-light leading-relaxed line-clamp-4">
+                        {diff.description.replace(/\.$/, '')}
+                      </p>
+                    </div>
+
+                    <div className="pt-1.5 border-t border-neutral-100 flex items-center justify-between text-[8px] sm:text-[9px] text-neutral-400 uppercase tracking-widest">
+                      <span>Garantia 10 Anos</span>
+                      <span className="text-[#B89334] font-bold">100% Usinado</span>
+                    </div>
+                  </div>
+                }
+              />
             ))}
           </div>
 
